@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+<body style="background-color: yellow;" >
+
+
+<script type="text/javascript" src="hatever.js"></script>
+<title>Cod E Dit</title>
+<!-- Work space -->
+<textarea style="positon: absolute; font-family: consolas; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true">WRITE YOUR CODE</textarea>
+
+<p style="position: fixed; bottom: 10px; display: none;" contenteditable="true" id="framename">./Name.language</p>
+<button style="position: fixed; bottom: 10px; margin-left: 150px; display: none;" onclick="framenameok()" id="framenameok">OPEN PREVIEW FRAME</button>
+</body>
+<div style="position: fixed; top: 0px; left: 0px; right: 0px; background-color: cyan; font-family: century gothic;" id="head-div">
+<img src="Cod E Dit Help and How To_files/image446.png" style="width:20px; height:20px;" id="icon"/>
+<button style="position: absolute; top: 0px;  background-color: cyan; border: none;" onclick="fileclick()" ondblclick="fileclick0()" id="file-button">File</button>
+<div style=" display: none; position: fixed; top: 50px; left: 0px; right: 0px; background-color: white; font-family: century gothic;  width: 200px;" id="file-div">
+<div  onclick="newclick()" id="new-div">New</div>
+<div onclick="opeclick()" id="ope-div">Open</div>
+<div onclick="runclick()" id="ope-div">Run</div>
+<div onclick="savclick()" id="sav-div">Save as Cod E Dit file</div>
+<div onclick="saveclick()" id="save-div">Save as other formats</div>
+<div onclick="retclick()" id="ret-div">Retrieve code</div>
+<div onclick="cloclick()" id="clo-div">Close</div>
+</div>
+
+<button style="position: absolute; top: 0px; left: 600px;  background-color: cyan; border: none;" onclick="helpclick()" id="prev-button">Help</button>
+</div>
+<iframe id="iframe" width="1000px" height="700px" style="margin-left: 100px; margin-top: 200px; display: none;" src="./"></iframe> 
+<style>
+
+</style>
+</body>
+<div style=" display: none; background-image: linear-gradient(white, gray, white); width: 600px; height: 600px;text-align: center;" id="full">
+<h1>SAVE AS OTHER FORMATS</h1>
+<select id="format">
+<option>text/html</option>
+<option>text/hta</option>
+<option>text/css</option>
+<option>text/js</option>
+<option>text/json</option>
+<option>text/xml</option>
+<option>text/txt</option>
+<script>
+function crea() {
+const saveButton = document.createElement('option');
+saveButton.innerHTML = document.getElementById("newf").innerHTML;
+document.getElementById("format").appendChild(saveButton);
+};
+</script>
+</select>
+<p contenteditable="true" id="newf">text/newformat</p>
+<button onclick="crea()">CREATE FORMAT</button>
+<p contenteditable="true" id="newfile">./File name</p>
+<button onclick="savecrea()">Save</button>
+<button onclick="closecrea">Close</button>
+</div>
+<div id="htm2">
+
+</div>
+<div style="display: none;" id="htm3">
+
+</div>
+
