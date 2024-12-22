@@ -86,7 +86,7 @@ color: yellow;
 @keyframes goody {
 	0%{background-color: cyan;
 	    color: yellow;}
-	67%{background-color: yellow;
+	50%{background-color: yellow;
 	    color: cyan;}
 	100%{background-color: cyan;
 	    color: yellow;}
