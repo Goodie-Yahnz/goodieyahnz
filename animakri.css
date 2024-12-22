@@ -84,9 +84,11 @@ color: yellow;
 	padding-top: 40px;
 }
 @keyframes goody {
-	from{background-color: cyan;
+	0%{background-color: cyan;
 	    color: yellow;}
-	to{background-color: yellow;
+	67%{background-color: yellow;
 	    color: cyan;}
+	100%{background-color: cyan;
+	    color: yellow;}
 }
 
