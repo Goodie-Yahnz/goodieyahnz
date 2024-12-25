@@ -91,4 +91,44 @@ color: yellow;
 	100%{background-color: cyan;
 	    color: yellow;}
 }
+.video-div {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	background-color: rgb(230, 230, 230);
+	height: 350px;
+	margin-top: 50px;
+	}
+.video-o {
+	position: absolute;
+	left: 25px;
+	top: 15px;
+	width: 500px;
+	bottom: 15px;
+	height: 300px;
+	background-color: rgb(230, 230, 230);
+	}
+.video-y {
+	position: absolute;
+	left: 575px;
+	top: 15px;
+	width: 500px;
+	bottom: 15px;
+	height: 300px;
+	background-color: rgb(230, 230, 230);
+	}
+.link-y {
+	font-family: century gothic;
+	position: absolute;
+	left: 1125px;
+	top: 275px;
+	width: 125px;
+	}
+.link-o {
+	font-family: century gothic;
+	position: absolute;
+	left: 1125px;
+	top: 25px;
+	width: 125px;
+	}
 
