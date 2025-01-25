@@ -9,6 +9,7 @@ width: 75px;
 }
 body {
 padding-top: 100px;
+background-color: lightyellow;
 }
 #workspace {
 position: absolute;
