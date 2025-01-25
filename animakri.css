@@ -1,10 +1,18 @@
-#head-div{
- background-color: cyan;
+#header{
+ background-color: none;
  color: yellow;
  position: absolute;
  top: 0px;
  left: 0px;
  right: 0px; 
+}
+#head-div{
+ background-color: cyan;
+ color: yellow;
+ position: absolute;
+ top: 0px;
+bottom: 0px;
+width: 75px;
 }
 body {
 padding-top: 100px;
