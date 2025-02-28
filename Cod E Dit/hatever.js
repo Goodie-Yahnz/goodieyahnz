@@ -46,9 +46,9 @@ function savecrea() {
 function closecrea() {
 	document.getElementById("full").style.display = "none";
 };
-/*function runclick() {
+function runclick() {
 document.getElementById("htm3").innerText = document.getElementById("htm").value;
-};*/
+};
   
   function retclick() {
 document.getElementById("htm").value = document.getElementById("htm3").innerText;
