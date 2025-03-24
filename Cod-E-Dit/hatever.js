@@ -16,7 +16,7 @@ function helpclick() {
 };
 
 function newclick() {
-	window.open("./COD E DIT.html");
+	window.open("./COD-E-DIT.html");
 };
 function cloclick() {
 	window.close(document.locaton);
