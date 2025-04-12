@@ -55,3 +55,4 @@ document.getElementById("htm").value = document.getElementById("htm3").innerText
 document.getElementById("ret-div").style.color  = "grey";
 };
 document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
+document.getElementById("htm").value = document.getElementById("htm3").innerHTML;
