@@ -9,16 +9,14 @@ function helclick() {
 };
 
 function newclick() {
-	window.open("./Animakri.html");
+	window.open("https://www.goodieyahnz.com.ng/Anim-A-Kri/Animakri.html/");
 	alert("New Anim A Kri file opened");
 };
 function cloclick() {
 	window.close("./Animakri.html");
 };
 
-function opeclick() {
-	window.open("./");
- };
+
          function openok() {
             var fso = new ActiveXObject("Scripting.FileSystemObject");
             var file = fso.OpenTextFile(document.getElementById("urlplace").value, 2, true);  // 2 = write mode, true = create if not exist
