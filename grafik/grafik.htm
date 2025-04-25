@@ -1,0 +1,314 @@
+<html><head><link rel="icon" type="image/x-icon" href="grafik.ico"><title>Grafik</title><style>#headdiv {background-color: cyan;height: 50px;position: fixed;top: 0px;left: 0px;right: 0px;}body {background-color: yellow;  z-index: 1;}#action{position: absolute;left: 150px;right: 150px;top: 15px;bottom: 15px;background-image: linear-gradient(yellow, rgb(128, 128, 0));border: 0;color: white;}#act1{position: absolute;top: 59px;left: 190px;background-color: white;display: none;}#act{background-image: radial-gradient(yellow, cyan);color: white;font-size: 20px;border: 0;margin-left: 5px;}#insert-div { background-image: radial-gradient(rgb(200, 200, 200), rgb(100, 100, 100)); margin-top: 300px; width: 700px; height: 1000px;  display: none; z-index: -2;}#edit-element { background-image: radial-gradient(rgb(200, 200, 200), rgb(100, 100, 100)); width: 700px; height: 1500px; margin-left: 800px; margin-top: 300px;  display: none; z-index: -2;}#workspace { z-index: 0; background-color: white; border: 1px solid black; position: relative; top: 75px; left: 75px; width: 1150px; height: 500px; resize: both; overflow: auto;}#insert-close { z-index: 0; position: relative; top: 0px; right: 0px; background-color: red; border: none; color: white; }#unusual { background-color: red; position: relative; top: 175px; left: 0px; right: 0px;z-index: 0;display: none;}</style></head><body><header id="headdiv"><img id="grafik" src="grafik.ico"><button onclick="document.getElementById('act1').style.display = 'inline';" ondblclick="document.getElementById('act1').style.display = 'none';" id="action">ACTION</button><div id="act1">
+<button id="act" onclick="window.open('https://www.goodieyahnz.com.ng/grafik/')">New</button>
+<button onclick="document.getElementById('insert-div').style.display= 'block';" id="act">Insert</button><button onclick="document.getElementById('edit-element').style.display= 'block';" ondblclick="ddocument.getElementById('edit-element').style.display= 'none';" id="act">Edit Elements</button><button onclick="grafik()" id="act">Open the Grafik Graphic Viewer</button><button onclick="htmlgraf()"  id="act">Show HTML Code</button><button onclick="window.close(document.location)" id="act">Close</button></div></header>
+<div id="outer"><div contenteditable="true" id="workspace"></div></div>
+<div id="insert-div"><button id="insert-close" onclick="document.getElementById('insert-div').style.display= 'none';">X</button><h1>INSERT ELEMENTS</h1><button onclick="document.getElementById('rect-creat').style.display='block';style.color = 'red'
+document.getElementById('unusual').style.display='none';
+document.getElementById('unusus').style.color='black';
+;" id="rectangle">Create</button><div style="display: none;" id="rect-creat"><p>Colour</p><input id="rect-color" type="color"><p>Rounded corner size</p><p id="rect-rcs" contenteditable="true">0</p><p>Gradient colors</p><p>Type</p><select id="rect-grad"><option>linear</option><option>radial</option><option>none</option></select>
+<p>Colours</p><input id="rect-golor" type="color"><input id="rect-polor" type="color"><p>Border Style</p>
+<select id="rect-btyle">
+<option>solid</option>
+<option>inset</option>
+<option>outset</option>
+<option>groove</option>
+<option>dotted</option>
+<option>dashed</option>
+<option>double</option>
+</select>
+<p>Border width</p><p id="rect-bidth" contenteditable="true">0</p><p>Border Colour</p><input id="rect-bolor" type="color"><p>Name</p><p id="rect-name" contenteditable="true">THIS IS COMPULSORY FOR FUTURE STYLING</p><button onclick="creatRectangle()">Creat</button></div>
+<button onclick="
+document.getElementById('i-image-div').style.display = 'inline';
+">Insert Image</button>
+<div id="i-image-div" style="display: none;">
+<input id="image-url" placeholder="Write url here">
+<button
+onclick="window.open('./')"
+>Get Here</button>
+<p contenteditable="true" id="img-id">THIS IS COMPULSORY FOR FUTURE STYLING</p>
+<input id="image-x" placeholder="Image width add px at the end of the number" value="100px">
+<input id="image-y" placeholder="Image height add px at the end of the number" value ="100px">
+<button onclick="iInsert()">Insert</button>
+</div>
+</div>
+<div id="edit-element">
+<p id="select-shape"></p>
+<button
+ onclick="
+ document.getElementById('sele').style.display = 'inline';
+ ">Select Element</button>
+<div style="display: none;" id="sele">
+<select id="element">
+<option>workspace</option>
+</select>
+<button onclick="
+ document.getElementById('select-shape').innerHTML =  document.getElementById('element').value;
+ document.getElementById('sele').style.display = 'none';
+document.getElementById('ele-color').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor;
+document.getElementById('ele-cread').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage;
+document.getElementById('ele-rcs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius; 
+document.getElementById('ele-btyle').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle; 
+ document.getElementById('ele-bidth').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth; 
+document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
+document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top;
+/*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
+document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
+ document.getElementById('element-display').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.display;
+ document.getElementById('ele-font').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.fontFamily;
+document.getElementById('ele-rotate').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate;
+document.getElementById('ele-fs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize;
+document.getElementById('element-clip').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath;
+">Select</button>
+</div>
+<p>Colour</p><input id="ele-color" type="color">
+<p>Text Colour</p><input id="ele-tolor" type="color">
+<p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
+<p contenteditable='true' id="ele-cread">(type of gradient "linear/radial")-gradient(color1,color2)"</p>
+<p>Border Type</p>
+<select id="ele-btyle">
+<option>solid</option>
+<option>inset</option>
+<option>outset</option>
+<option>groove</option>
+<option>dotted</option>
+<option>dashed</option>
+<option>double</option>
+</select>
+<p>Border width</p><p id="ele-bidth" contenteditable="true">0</p><p>Border Colour</p><input id="ele-bolor" type="color">
+<p>Element position X</p><p id="ele-left" contenteditable="true">0</p>
+<p>Element position Y</p><p id="ele-top" contenteditable="true">0</p>
+<select id="element-display">
+<option>block</option>
+<option>none</option>
+</select>
+<p>CLIP TO</p>
+<select id="element-clip">
+<option>none</option>
+<option>polygon(50% 0%, 0% 100%, 100% 100%)</option>
+<option>polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%)</option>
+<option>polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)</option>
+<option>polygon(50% 0%, 95% 35%, 77% 90%, 23% 90%, 5% 35%)</option>
+<option>polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)</option>
+<option>polygon(50% 0%, 90% 20%, 100% 60%, 75% 95%, 25% 95%, 0% 60%, 10% 20%)</option>
+<option>polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)</option>
+<option>polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%, 50% 0%)</option>
+<option>polygon(50% 0%, 80% 10%, 95% 35%, 95% 65%, 80% 90%, 50% 100%, 20% 90%, 5% 65%, 5% 35%, 20% 10%)</option>
+</select>
+<p >Font</p>
+<select id="ele-font">
+<option style="font-family: Agency FB">Agency FB</option>
+<option style="font-family: Aharoni">Aharoni</option>
+<option style="font-family: Albertus">Albertus</option>
+<option style="font-family: Algerian">Algerian</option>
+<option style="font-family: Antique Olive">Antique Olive</option>
+<option style="font-family: Arial">Arial</option>
+<option style="font-family: Arial Black">Arial Black</option>
+<option style="font-family: Batang">Batang</option>
+<option style="font-family: Bell MT">Bell MT</option>
+<option style="font-family: Blackadder ITC">Blackadder ITC</option>
+<option style="font-family: Bodoni MT">Bodoni MT</option>
+<option style="font-family: Bodoni MT Black">Bodoni MT Black</option>
+<option style="font-family: Bodoni MT Condensed">Bodoni MT Condensed</option>
+<option style="font-family: Bradley Hand ITC">Bradley Hand ITC</option>
+<option style="font-family: Broadway">Broadway</option>
+<option style="font-family: Calibri">Calibri</option>
+<option style="font-family: Cambria">Cambria</option>
+<option style="font-family: Castellar">Castellar</option>
+<option style="font-family: Century">Century</option>
+<option style="font-family: Century gothic">Century Gothic</option>
+<option style="font-family: Century Schoolbook">Century Schoolbook</option>
+<option style="font-family: Chiller">Chiller</option>
+<option style="font-family: Clarendon">Clarendon</option>
+<option style="font-family: Clarendon Condensed">Clarendon Condensed</option>
+<option style="font-family: Comic Sans MS">Comic Sans MS</option>
+<option style="font-family: Consolas">Consolas</option>
+<option style="font-family: Cooper Black">Cooper Black</option>
+<option style="font-family: David">David</option>
+<option style="font-family: Elephant">Elephant</option>
+<option style="font-family: Forte">Forte</option>
+<option style="font-family: Franklin Gothic Book">Frankin Gothic Book</option>
+<option style="font-family: French Script">French Script</option>
+<option style="font-family: French Script MT">French Script MT</option>
+<option style="font-family: Gigi">Gigi</option>
+<option style="font-family: Impact">Impact</option>
+<option style="font-family: ">Symbol</option>
+<option style="font-family: Times New Roman">Times New Roman</option>
+<option style="font-family: Wide Latin">Wide Latin</option>
+<option style="font-family: ">Webdings</option>
+<option style="font-family: ">Wingdings</option>
+<option style="font-family: ">Wingdings 2</option>
+<option style="font-family: ">Wingdings 3</option>
+</select>
+<select id="ele-rotate">
+<option>-345deg</option>
+<option>-330deg</option>
+<option>-315deg</option>
+<option>-300deg</option>
+<option>-285deg</option>
+<option>-270deg</option>
+<option>-255deg</option>
+<option>-240deg</option>
+<option>-225deg</option>
+<option>-210deg</option>
+<option>-195deg</option>
+<option>-180deg</option>
+<option>-165deg</option>
+<option>-150deg</option>
+<option>-135deg</option>
+<option>-120deg</option>
+<option>-105deg</option>
+<option>-90deg</option>
+<option>-75deg</option>
+<option>-60deg</option>
+<option>-45deg</option>
+<option>-30deg</option>
+<option>-15deg</option>
+<option>0deg</option>
+<option>15deg</option>
+<option>30deg</option>
+<option>45deg</option>
+<option>60deg</option>
+<option>75deg</option>
+<option>90deg</option>
+<option>105deg</option>
+<option>120deg</option>
+<option>135deg</option>
+<option>150deg</option>
+<option>165deg</option>
+<option>180deg</option>
+<option>195deg</option>
+<option>210deg</option>
+<option>225deg</option>
+<option>240deg</option>
+<option>255deg</option>
+<option>270deg</option>
+<option>285deg</option>
+<option>300deg</option>
+<option>315deg</option>
+<option>330deg</option>
+<option>345deg</option>
+</select>
+<p>Font size</p>
+<p id="ele-fs" contenteditable="true">0px</p>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='normal';
+style.color='black';
+"><b>B</b></button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontStyle='in';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontStyle='normal';
+style.color='black';
+"><i>I</i></button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.textDecoration='underline';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.textDecoration='none';
+style.color='black';
+"><u>U</u></button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage='none';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('ele-cread').innerHTML;
+style.color='black';
+">Remove Gradient Colour</button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor='rgba(255, 255, 255, 0)';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor = document.getElementById('ele-color').value;
+style.color='black';
+">Remove Colour</button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.transform='skewY(45deg)';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.transform='none';
+style.color='black';
+">Transform to a vertical parallelogram</button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.transform='skewX(45deg)';
+style.color='red';
+"
+ondblclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.transform='none';
+style.color='black';
+">Transform to a horizontal parallelogram</button>
+<button onclick="
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor = document.getElementById('ele-color').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius = document.getElementById('ele-rcs').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('ele-cread').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle = document.getElementById('ele-btyle').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth = document.getElementById('ele-bidth').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.left = document.getElementById('ele-left').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.top = document.getElementById('ele-top').innerHTML;
+/*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
+document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
+document.getElementById(document.getElementById('select-shape').innerHTML).style.display = document.getElementById('element-display').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontFamily = document.getElementById('ele-font').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate = document.getElementById('ele-rotate').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.color = document.getElementById('ele-tolor').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize = document.getElementById('ele-fs').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath = document.getElementById('element-clip').value;
+">OK</button>
+</div>
+<div style="background-color: white; display: block; font-family: consolas;" id="htar"></div>
+<script>
+function creatRectangle() {
+ let rect = document.createElement('div');
+ rect.contenteditable = 'true';
+ rect.style.backgroundColor = document.getElementById('rect-color').value;
+ rect.style.backgroundImage = document.getElementById('rect-grad').value+"-gradient("+document.getElementById('rect-golor').value+","+document.getElementById('rect-polor').value+")";
+ rect.style.width = '100px';
+ rect.style.height = '100px';
+ rect.style.resize = 'both';
+ rect.style.overflow = "auto";
+ rect.style.position = "relative";
+ rect.style.borderRadius = document.getElementById('rect-rcs').innerHTML+'px';
+ rect.style.borderWidth = document.getElementById('rect-bidth').innerHTML+'px';
+ rect.id = document.getElementById('rect-name').innerHTML;
+ rect.style.borderColor = document.getElementById('rect-bolor').value; 
+ rect.style.borderStyle = document.getElementById('rect-btyle').value;
+ document.getElementById('workspace').appendChild(rect); 
+ let element = document.createElement('option');
+ element.innerHTML = document.getElementById('rect-name').innerHTML;
+ document.getElementById('element').appendChild(element); 
+ };
+function iInsert() {
+ let image = document.createElement('img');
+ image.style.width = document.getElementById('image-x').value;
+ image.style.height = document.getElementById('image-y').value;
+ image.style.resize = 'both';
+ image.style.overflow = "auto";
+ image.style.position = "relative";
+ image.src = document.getElementById('image-url').value;
+ image.id = document.getElementById('img-id').innerHTML;
+ document.getElementById('workspace').appendChild(image); 
+ let imagename = document.createElement('option');
+ imagename.innerHTML = document.getElementById('img-id').innerHTML;
+ document.getElementById('element').appendChild(imagename); 
+ };
+function grafik() {
+  const blob = new Blob([document.getElementById("outer").innerHTML], { type: 'text/html' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'Graphic design.html';
+  link.click();
+};
+function htmlgraf() {
+  document.getElementById("htar").innerText = document.getElementById("outer").innerHTML;
+ document.getElementById("htar").style.dislay = "block"; 
+ };
+</script></body></html>
