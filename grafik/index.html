@@ -275,7 +275,7 @@ function creatRectangle() {
  rect.style.height = '100px';
  rect.style.resize = 'both';
  rect.style.overflow = "auto";
- rect.style.position = "relative";
+ rect.style.position = "absolute";
  rect.style.borderRadius = document.getElementById('rect-rcs').innerHTML+'px';
  rect.style.borderWidth = document.getElementById('rect-bidth').innerHTML+'px';
  rect.id = document.getElementById('rect-name').innerHTML;
@@ -292,7 +292,7 @@ function iInsert() {
  image.style.height = document.getElementById('image-y').value;
  image.style.resize = 'both';
  image.style.overflow = "auto";
- image.style.position = "relative";
+ image.style.position = "absolute;
  image.src = document.getElementById('image-url').value;
  image.id = document.getElementById('img-id').innerHTML;
  document.getElementById('workspace').appendChild(image); 
