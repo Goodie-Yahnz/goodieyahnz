@@ -57,7 +57,7 @@ function animclick0() {
 	function animclick() {
 	document.getElementById("animation-div").style.display = "inline";
 document.getElementById("media").style.display = "inline";
-	alert("YOU MIGHT WANT TO MAKE THIS "+document.getElementById('myanimation').style.width+" x "+ocument.getElementById('myanimation').style.height);
+	alert("YOU MIGHT WANT TO MAKE THIS "+document.getElementById('myanimation').style.width+" x "+document.getElementById('myanimation').style.height);
 
 };
 	function gettingurlimg() {
