@@ -5,7 +5,7 @@ function fileclick0() {
 	document.getElementById("file-div").style.display = "none";
 };
 function helclick() {
-	window.open("Anim A Kri Help and How To.htm");
+	window.open("Anim A Kri Help and How To.htm"+document.getElemwntById(""));
 };
 
 function newclick() {
@@ -57,7 +57,7 @@ function animclick0() {
 	function animclick() {
 	document.getElementById("animation-div").style.display = "inline";
 document.getElementById("media").style.display = "inline";
-	alert("YOU MIGHT WANT TO MAKE THIS" );
+	alert("YOU MIGHT WANT TO MAKE THIS "+document.getElementById('myanimation').style.width+" x "+ocument.getElementById('myanimation').style.height);
 
 };
 	function gettingurlimg() {
