@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bukmak</title>
+<link rel="icon" type="image/x-icon" src="bmk.ico">
+<style>
+#header {
+background-color: yellow;
+height: 40px;
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+display: flex;
+padding-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
+padding-bottom: 5px;
+}
+#icon {
+background-color: yellow;
+
+position: absolute;
+
+}
+#workspace {
+position: absolute;
+top: 40px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+}
+#urlbox {
+position: absolute;
+top: 100px;
+left: 40px;
+right: 60px;
+height: 100px;
+display : flex;
+}
+#opeurl {
+position: absolute;
+top: 100px;
+right: 10px;
+width: 50px;
+height: 100px;
+display : flex;
+}
+</style>
+<script>
+ function add() {
+  let bukmak = document.createElement('option');
+  bukmak.innerHTML = document.getElementById('addurl').value;
+  bukmak.id = document.getElementById('addurl').value;
+  document.getElementById('urlbox').appendChild(bukmak);
+  //deleting
+   let bukmak2 = document.createElement('option');
+  bukmak2.innerHTML = document.getElementById('addurl').value;
+  bukmak2.id = document.getElementById('addurl').value;
+  document.getElementById('minusurl').appendChild(bukmak2);
+ };
+ function minus() {
+  document.getElementById(document.getElementById('minusurl').value).remove();
+ };
+</script>
+</head>
+<body style='background-color: cyan;'>
+<header id="header">
+<img id="icon" src="bmk.ico">
+<p id="appname" style="font-family: century gothic; color: cyan; margin-left: 100px;">BUKMAK</p>
+<button style="margin-left: 100px; background-color: yellow; border: none; color: cyan;" onclick="window.open('https://www.goodieyahnz.com.ng/bukmak');" id="new">New</button>
+<button style=' background-color: yellow; border: none; color: cyan;' onclick="add()" id="add">+</button>
+<input id="addurl" placeholder="Write the name of your url" value="https://">
+<button style=' background-color: yellow; border: none; color: cyan;' onclick="minus()" id="minus">-</button>
+<select id="minusurl">
+<option>default</option>
+</select>
+<button style=' background-color: yellow; border: none; color: cyan;' onclick="window.close(document.location);"id="close">Close</button></header>
+</header>
+<div id="workspace">
+<select id="urlbox">
+<option id="default">https://www.goodieyahnz.com.ng</option>
+</select>
+<button style='display: flex; background-color: yellow; border: none; color: cyan;' onclick="window.open(document.getElementById('urlbox').value)" id="opeurl">Open</button>
+</div>
+</body>
+</html>
