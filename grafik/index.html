@@ -60,7 +60,27 @@ document.getElementById('ele-fs').innerHTML = document.getElementById(document.g
 document.getElementById('element-clip').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath;
 ">Select</button>
 </div>
-<p>Colour</p><input id="ele-color" type="color">
+<p>Colour</p>
+ <select id="ele-color">
+  <option>red</option>
+  <option>orange</option>
+  <option>yellow</option>
+  <option>green</option>
+  <option>cyan</option>
+  <option>blue</option>
+  <option>sky blue</option>
+  <option>purple</option>
+  <option>indigo</option>
+  <option>pink</option>
+  <option>brown</option>
+  <option>maroon</option>
+  <option>white</option>
+  <option>grey</option>
+  <option>black</option>
+  <option>sea green</option>
+ </select>
+ <input type="color" id='ele-select-color' >
+ <button onclick="addcolor()">Add Color</button>
 <p>Text Colour</p><input id="ele-tolor" type="color">
 <p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
 <p contenteditable='true' id="ele-cread">(type of gradient "linear/radial")-gradient(color1,color2)"</p>
@@ -310,5 +330,10 @@ function grafik() {
 function htmlgraf() {
   document.getElementById("htar").innerText = document.getElementById("outer").innerHTML;
  document.getElementById("htar").style.dislay = "block"; 
+ };
+ function addcolor() {
+ let addmycolor = document.createElement('option');
+ addmycolor.innerHTML = document.getElementById('ele-select-color').value;
+ document.getElementById('ele-color').appendChild(imagename); 
  };
 </script></body></html>
