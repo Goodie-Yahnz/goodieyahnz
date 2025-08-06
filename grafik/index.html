@@ -78,10 +78,29 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>grey</option>
   <option>black</option>
   <option>sea green</option>
+   <option>rgba(255, 255, 255, 0)</option>
  </select>
  <input type="color" id='ele-select-color' >
  <button onclick="addcolor()">Add Color</button>
-<p>Text Colour</p><input id="ele-tolor" type="color">
+<p>Text Colour</p> <select id="ele-tolor">
+  <option>red</option>
+  <option>orange</option>
+  <option>yellow</option>
+  <option>green</option>
+  <option>cyan</option>
+  <option>blue</option>
+  <option>sky blue</option>
+  <option>purple</option>
+  <option>indigo</option>
+  <option>pink</option>
+  <option>brown</option>
+  <option>maroon</option>
+  <option>white</option>
+  <option>grey</option>
+  <option>black</option>
+  <option>sea green</option>
+ <option>rgba(255, 255, 255, 0)</option>
+ </select>
 <p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
 <p contenteditable='true' id="ele-cread">(type of gradient "linear/radial")-gradient(color1,color2)"</p>
 <p>Border Type</p>
@@ -209,7 +228,8 @@ document.getElementById('element-clip').value = document.getElementById(document
 <option>345deg</option>
 </select>
 <p>Font size</p>
-<input type="number" step="0.1" min="2px" max="1000px">
+<p contenteditable="true" id="ele-fs">50px</p>
+ 
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
 style.color='red';
@@ -334,6 +354,6 @@ function htmlgraf() {
  function addcolor() {
  let addmycolor = document.createElement('option');
  addmycolor.innerHTML = document.getElementById('ele-select-color').value;
- document.getElementById('ele-color').appendChild(addmycolor); 
+ document.getElementById('ele-color','ele-tolor').appendChild(addmycolor); 
  };
 </script></body></html>
