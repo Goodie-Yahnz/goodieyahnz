@@ -229,7 +229,11 @@ document.getElementById('element-clip').value = document.getElementById(document
 </select>
 <p>Font size</p>
 <p contenteditable="true" id="ele-fs">50px</p>
- 
+ <p>Opacity</p>
+ <form>
+  <label for="opacity level">Opacity level:</label>
+  <input type="number" step="0.1" id="ele-opa" max="1" min="0">
+ </form>
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
 style.color='red';
@@ -302,6 +306,7 @@ document.getElementById(document.getElementById('select-shape').innerHTML).style
 document.getElementById(document.getElementById('select-shape').innerHTML).style.color = document.getElementById('ele-tolor').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize = document.getElementById('ele-fs').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath = document.getElementById('element-clip').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.opacity = document.getElementById('ele-opa').value;
 ">OK</button>
 </div>
 <div style="background-color: white; display: block; font-family: consolas;" id="htar"></div>
