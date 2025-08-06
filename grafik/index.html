@@ -230,10 +230,10 @@ document.getElementById('element-clip').value = document.getElementById(document
 <p>Font size</p>
 <p contenteditable="true" id="ele-fs">50px</p>
  <p>Opacity</p>
- <form>
+
   <label for="opacity level">Opacity level:</label>
   <input type="number" step="0.1" id="ele-opa" max="1" min="0">
- </form>
+
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
 style.color='red';
@@ -359,6 +359,7 @@ function htmlgraf() {
  function addcolor() {
  let addmycolor = document.createElement('option');
  addmycolor.innerHTML = document.getElementById('ele-select-color').value;
- document.getElementById('ele-color','ele-tolor').appendChild(addmycolor); 
+ document.getElementById('ele-color').appendChild(addmycolor);
+   document.getElementById('ele-tolor').appendChild(addmycolor);
  };
 </script></body></html>
