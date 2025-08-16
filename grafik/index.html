@@ -68,7 +68,7 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>green</option>
   <option>cyan</option>
   <option>blue</option>
-  <option>sky blue</option>
+  <option>skyblue</option>
   <option>purple</option>
   <option>indigo</option>
   <option>pink</option>
@@ -113,7 +113,25 @@ document.getElementById('element-clip').value = document.getElementById(document
 <option>dashed</option>
 <option>double</option>
 </select>
-<p>Border width</p><p id="ele-bidth" contenteditable="true">0</p><p>Border Colour</p><input id="ele-bolor" type="color">
+<p>Border width</p><p id="ele-bidth" contenteditable="true">0</p><p>Border Colour</p><select id="ele-bolor">
+  <option>red</option>
+  <option>orange</option>
+  <option>yellow</option>
+  <option>green</option>
+  <option>cyan</option>
+  <option>blue</option>
+  <option>skyblue</option>
+  <option>purple</option>
+  <option>indigo</option>
+  <option>pink</option>
+  <option>brown</option>
+  <option>maroon</option>
+  <option>white</option>
+  <option>grey</option>
+  <option>black</option>
+  <option>sea green</option>
+   <option>rgba(255, 255, 255, 0)</option>
+ </select>
 <p>Element position X</p><p id="ele-left" contenteditable="true">0</p>
 <p>Element position Y</p><p id="ele-top" contenteditable="true">0</p>
 <select id="element-display">
@@ -360,6 +378,12 @@ function htmlgraf() {
  let addmycolor = document.createElement('option');
  addmycolor.innerHTML = document.getElementById('ele-select-color').value;
  document.getElementById('ele-color').appendChild(addmycolor);
-   document.getElementById('ele-tolor').appendChild(addmycolor);
+   let addmytcolor = document.createElement('option');
+ addmytcolor.innerHTML = document.getElementById('ele-select-color').value;
+ document.getElementById('ele-tolor').appendChild(addmytcolor);
+  let addmybcolor = document.createElement('option');
+ addmybcolor.innerHTML = document.getElementById('ele-select-color').value;
+ document.getElementById('ele-bolor').appendChild(addmybcolor);
  };
+
 </script></body></html>
