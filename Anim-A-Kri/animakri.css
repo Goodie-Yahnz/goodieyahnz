@@ -143,7 +143,16 @@ body {
 }
 #imp-img {
 	position: absolute;
-	top: 300px;
+	top: 100px;
 	left: 50px;
-	right: 0px;
+	right: 50px;
+	width: 1150px;
+	height: 100px;
 }
+#imp-ifr {
+	position: absolute;
+	top: 230px;
+	left: 50px;
+	right: 50px;
+}
+
