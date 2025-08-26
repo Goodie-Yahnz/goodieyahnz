@@ -20,9 +20,9 @@
 <div id="workspace">
   <div id="add-work">
 Frame number <input placeholder="Your frame number" id="add-per" type="number"> 
- url <input placeholder="Your img url in between the quotations" id="add-per" type="text">
+ url <input placeholder="Your img url in between the quotations" id="add-furl" type="text">
  <button onclick="
-   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-c'+document.getElementById('add-per').innerHTML);
+   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML);
    ">Create Frame</button>   
   </div>
 </div>
@@ -75,6 +75,7 @@ Frame number <input placeholder="Your frame number" id="add-per" type="number">
 </div>
 </body>
  
+
 
 
 
