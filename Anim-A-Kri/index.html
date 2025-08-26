@@ -3,7 +3,7 @@
 <head>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-  <div id="imported">
+  <div style="background-color: white;z-index: 1;" id="imported">
   <select id="imp-img">
     
   </select>
@@ -18,6 +18,13 @@
 <title>Anim A Kri</title>
 <style id="animating-style"></style>
 <div id="workspace">
+  <div id="add-work">
+Frame number <input placeholder="Your frame number" id="add-per" type="number"> 
+ url <input placeholder="Your img url in between the quotations" id="add-per" type="text">
+ <button onclick="
+   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-c'+document.getElementById('add-per').innerHTML);
+   ">Create Frame</button>   
+  </div>
 </div>
 <div id="head-div">
 <img src="favicon.ico" id="icon"/>
@@ -68,6 +75,7 @@
 </div>
 </body>
  
+
 
 
 
