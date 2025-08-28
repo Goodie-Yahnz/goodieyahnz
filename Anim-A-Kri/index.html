@@ -3,7 +3,7 @@
 <head>
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-  <div style="background-color: white;z-index: 1;" id="imported">
+  <div style="background-color: white;z-index: 1; display: none;" id="imported">
   <select id="imp-img">
     
   </select>
@@ -22,7 +22,11 @@
 Frame number <input placeholder="Your frame number" id="add-per" type="number"> 
  url <input placeholder="Your img url in between the quotations" id="add-furl" type="text">
  <button onclick="
-   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML);
+   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
+   document.getElementById('animationcode').appendChild(newframe);
+   let newupload = document.createElement('option');
+   newupload.innerHTML = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
+document.getElementById('imp-img').appendChild(newupload);
    ">Create Frame</button>   
   </div>
 </div>
@@ -75,6 +79,7 @@ Frame number <input placeholder="Your frame number" id="add-per" type="number">
 </div>
 </body>
  
+
 
 
 
