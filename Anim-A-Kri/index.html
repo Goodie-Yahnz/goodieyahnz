@@ -22,7 +22,8 @@
 Frame number <input placeholder="Your frame number" id="add-per" type="number"> 
  url <input placeholder="Your img url in between the quotations" id="add-furl" type="text">
  <button onclick="
-   let newframe = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
+   let newframe = document.createElement('');
+   newframe.innerText = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
    document.getElementById('animationcode').appendChild(newframe);
    let newupload = document.createElement('option');
    newupload.innerHTML = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
@@ -79,6 +80,7 @@ document.getElementById('imp-img').appendChild(newupload);
 </div>
 </body>
  
+
 
 
 
