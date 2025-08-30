@@ -74,6 +74,10 @@ document.getElementById("media").style.display = "none";
 		function stop() {
 			document.getElementById("myanimation").style.animationIterationCount = "1";	
 		};
+function adanimation() {
+	document.getElementById("").style.display = "block";
+};
+
 
 
 
