@@ -22,15 +22,15 @@
 Frame number <input placeholder="Your frame number" id="add-per" type="number">
     <p id="addt1">%:{background-image: url('</p>
   
- url <input placeholder="Your img url in between the quotations"  id="add-furl" type="text">
+ url <input placeholder="Your img url"  id="add-furl" type="text">
     <p id="addt2">');}</p>
  <button onclick="
    let newframe = document.createTextNode(document.getElementById('add-per').innerHTML+document.getElementById('addt1').innerHTML+document.getElementById('add-furl').innerHTML+document.getElementById('addt2').innerHTML);
 
    document.getElementById('animationcode').appendChild(newframe);
    let newupload = document.createElement('option');
-   newupload.innerHTML = document.write(document.getElementById('add-per').innerHTML+'%:{background-image: url('+document.getElementById('add-furl').innerHTML)+');}';
-document.getElementById('imp-img').appendChild(newupload);
+   newupload.innerHTML = document.getElementById('add-per').innerHTML+document.getElementById('addt1').innerHTML+document.getElementById('add-furl').innerHTML+document.getElementById('addt2').innerHTML;
+   document.getElementById('imp-img').appendChild(newupload);
    ">Create Frame</button>   
   </div>
 </div>
@@ -83,6 +83,7 @@ document.getElementById('imp-img').appendChild(newupload);
 </div>
 </body>
  
+
 
 
 
