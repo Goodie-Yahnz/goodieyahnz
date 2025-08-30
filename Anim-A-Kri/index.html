@@ -7,7 +7,13 @@
   <select id="imp-img">
     
   </select>
-  <iframe width="1150px" height="500px" id="imp-ifr" src></iframe>
+  <iframe width="850px" height="300px" id="imp-ifr" src></iframe>
+    <button onclick="document.getElementById('imp-ifr').contentWindow.history.back;">Back</button>
+    <button onclick="document.getElementById('imp-ifr').contentWindow.history.forward;">Forward</button>
+    <button onclick="document.getElementById('imp-ifr').src = document.getElementById('imp-img').value;">Back</button>
+    <script>
+      document.getElementById('imp-ifr').src = document.getElementById('imp-img').value;
+    </script>
   </div>
 
 <body>
@@ -36,6 +42,7 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
   <div id="speedy">
     <input type="number" placeholder="Your speed level" id="s-speed">
     <button onclick="
+      document.getElementById('speedy').style.display = 'none';
       document.getElementById('workspace').style.animationDuration = document.getElementById('s-speed').value+ 's';
       ">Change Speed</button>
   </div>
@@ -88,6 +95,7 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
 </div>
 </body>
  
+
 
 
 
