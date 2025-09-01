@@ -9,11 +9,12 @@ function helclick() {
 };
 
 function newclick() {
-	window.open("https://www.goodieyahnz.com.ng/Anim-A-Kri/Animakri.html/");
+	window.open("https://www.goodieyahnz.com.ng/Anim-A-Kri/");
 	alert("New Anim A Kri file opened");
+	document.getElementById("file-div").style.display = "none";
 };
 function cloclick() {
-	window.close("./Animakri.html");
+	window.close(document.location);
 };
 
 
@@ -76,13 +77,17 @@ document.getElementById("media").style.display = "none";
 		};
 function adanimclick() {
 	document.getElementById("add-work").style.display = "block";
+	document.getElementById("ani-div").style.display = "none";
 };
 function spanimclick() {
 	document.getElementById("speedy").style.display = "block";
+	document.getElementById("ani-div").style.display = "none";
 };
 function madanimclick() {
 	document.getElementById("imported").style.display = "block";
+	document.getElementById("ani-div").style.display = "none";
 };
+
 
 
 
