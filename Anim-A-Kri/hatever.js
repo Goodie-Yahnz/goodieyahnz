@@ -70,7 +70,7 @@ document.getElementById("media").style.display = "none";
 		};
 		function play() {
 			document.getElementById("animating-style").innerHTML = document.getElementById("animationcode").innerHTML;
-			document.getElementById("myanimation").style.animationIterationCount = "70000000";
+			document.getElementById("workspace").style.animationIterationCount = "700000000000000000000";
 		};
 		function stop() {
 			document.getElementById("myanimation").style.animationIterationCount = "1";	
@@ -87,6 +87,7 @@ function madanimclick() {
 	document.getElementById("imported").style.display = "block";
 	document.getElementById("ani-div").style.display = "none";
 };
+
 
 
 
