@@ -16,7 +16,7 @@ function helpclick() {
 };
 
 function newclick() {
-	window.open("./COD-E-DIT.html");
+	window.open("https://www.goodieyahnz.com.ng/Cod-E-Dit/");
 };
 function cloclick() {
 	window.close(document.locaton);
@@ -56,3 +56,4 @@ document.getElementById("ret-div").style.color  = "grey";
 };
 document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
 document.getElementById("htm").value = document.getElementById("htm3").innerHTML;
+
