@@ -83,10 +83,11 @@ function spanimclick() {
 	document.getElementById("speedy").style.display = "block";
 	document.getElementById("ani-div").style.display = "none";
 };
-function madanimclick() {
+function manimclick() {
 	document.getElementById("imported").style.display = "block";
 	document.getElementById("ani-div").style.display = "none";
 };
+
 
 
 
