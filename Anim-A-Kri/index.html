@@ -8,6 +8,7 @@
     
   </select>
   <iframe width="850px" height="300px" id="imp-ifr" src></iframe>
+    <button onclick="document.getElementById('imp-ifr').src = document.getElementById('imp-img').value;">Open</button>
     <button onclick="document.getElementById('imp-ifr').contentWindow.history.back;">Back</button>
     <button onclick="document.getElementById('imp-ifr').contentWindow.history.forward;">Forward</button>
     <button onclick="document.getElementById('imp-ifr').src = document.getElementById('imp-img').value;">Reload</button>
@@ -38,6 +39,7 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
    let newupload = document.createElement('option');
    newupload.innerHTML = document.getElementById('add-furl').value;
    document.getElementById('imp-img').appendChild(newupload);
+   document.getElementById('addwork').style.display = 'none';
    ">Create Frame</button>   
   </div>
   <div style="display: none;" id="speedy">
@@ -96,6 +98,7 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
 </div>
 </body>
  
+
 
 
 
