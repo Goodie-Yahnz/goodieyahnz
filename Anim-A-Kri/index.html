@@ -39,8 +39,9 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
    let newupload = document.createElement('option');
    newupload.innerHTML = document.getElementById('add-furl').value;
    document.getElementById('imp-img').appendChild(newupload);
-   document.getElementById('addwork').style.display = 'none';
-   ">Create Frame</button>   
+  
+   ">Create Frame</button>
+    <button onclick=" document.getElementById('addwork').style.display = 'none';">Close</button>
   </div>
   <div style="display: none;" id="speedy">
     <input type="number" placeholder="Your speed level" id="s-speed">
@@ -98,6 +99,7 @@ Frame number <input placeholder="Your frame number" step= "0.1" id="add-per" typ
 </div>
 </body>
  
+
 
 
 
