@@ -6,3 +6,8 @@
   width: 100px;
  height: 100px;
 }
+.selected 
+ margin-left: 100px;
+ right: 100px;
+ border: none;
+}
