@@ -89,4 +89,138 @@
   </div>
 
 </body>
+  <style>
+    /* Global */
+body {
+  padding-top: 200px;
+  font-family: "Century Gothic", sans-serif;
+  margin: 0;
+  background: #fff;
+}
+
+/* Logo and Titles */
+.site-title a, 
+.site-subtitle {
+  display: inline-block;
+  text-decoration: none;
+  background-color: cyan;
+  color: yellow;
+  animation: goody 5s infinite;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.site-title {
+  text-align: center;
+}
+
+.site-subtitle {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Header */
+#head-div {
+  background-color: rgb(0, 90, 90);
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#icon {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+/* Navigation Buttons */
+.selected {
+  font-size: 30px;
+  background-color: cyan;
+  border: none;
+  color: yellow;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.selected a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#apps-button {
+  background-color: yellow;
+}
+
+#apps-button a {
+  color: cyan;
+}
+
+/* Workspace */
+#workspace {
+  position: relative;
+  left: 80px;
+  margin-top: 50px;
+}
+
+/* App Blocks */
+.app {
+  margin-bottom: 50px;
+}
+
+.app-box {
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appicon {
+  width: 64px;
+  height: 64px;
+}
+
+.appname {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.appopen,
+.download {
+  margin: 5px 0;
+  background-color: cyan;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.appopen a,
+.download a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+}
+
+.appcreation,
+.appuse {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes goody {
+  50% {
+    background-color: yellow;
+    color: cyan;
+    width: auto;
+  }
+}
+
+  </style>
 </html>
