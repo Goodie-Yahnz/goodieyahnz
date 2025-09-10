@@ -7,9 +7,13 @@
  height: 100px;
 }
 .selected 
- margin-left: 100px;
+ margin-left: 150px;
 position: absolute;
- right: 100px;
+ right: 500px;
  border: none;
 font-size: 35px;
 }
+#name {
+ padding: 30px;
+ border-radius: 10px;
+} 
