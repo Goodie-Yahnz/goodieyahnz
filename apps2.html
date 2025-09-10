@@ -90,94 +90,113 @@
 
 </body>
   <style>
-    /* Global */
+   /* General Reset */
 body {
+  margin: 0;
   padding-top: 200px;
   font-family: "Century Gothic", sans-serif;
-  margin: 0;
   background: #fff;
-}
-
-/* Logo and Titles */
-.site-title a, 
-.site-subtitle {
-  display: inline-block;
-  text-decoration: none;
-  background-color: cyan;
-  color: yellow;
-  animation: goody 5s infinite;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-.site-title {
-  text-align: center;
-}
-
-.site-subtitle {
-  text-align: center;
-  margin: 20px auto;
 }
 
 /* Header */
 #head-div {
   background-color: rgb(0, 90, 90);
-  padding: 50px;
+  padding: 20px 40px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#icon {
+#head-div img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  background: cyan;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-btn a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+}
+
+.nav-btn.active {
+  background: yellow;
+}
+
+.nav-btn.active a {
+  color: cyan;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.hero-logo {
   width: 70px;
   height: 70px;
   vertical-align: middle;
 }
 
-/* Navigation Buttons */
-.selected {
-  font-size: 30px;
-  background-color: cyan;
-  border: none;
-  color: yellow;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-.selected a {
+.site-title a {
   text-decoration: none;
-  color: inherit;
+  color: yellow;
+  background: cyan;
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: goody 5s infinite;
 }
 
-#apps-button {
-  background-color: yellow;
-}
-
-#apps-button a {
-  color: cyan;
+.site-subtitle {
+  margin-top: 15px;
+  font-size: 28px;
+  background: cyan;
+  color: yellow;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  animation: goody 5s infinite;
 }
 
 /* Workspace */
 #workspace {
-  position: relative;
-  left: 80px;
-  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px 40px;
 }
 
-/* App Blocks */
-.app {
-  margin-bottom: 50px;
-}
-
+/* App Boxes */
 .app-box {
-  background-color: rgb(240, 240, 240);
+  background: rgb(240, 240, 240);
   padding: 20px;
-  border-radius: 8px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.app-box:hover {
+  transform: translateY(-5px);
 }
 
 .appicon {
@@ -186,31 +205,64 @@ body {
 }
 
 .appname {
-  font-size: 24px;
   margin: 10px 0;
+  font-size: 22px;
+  color: rgb(0, 90, 90);
 }
 
-.appopen,
-.download {
-  margin: 5px 0;
-  background-color: cyan;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.appopen a,
-.download a {
-  text-decoration: none;
-  color: yellow;
-  font-weight: bold;
-}
-
-.appcreation,
 .appuse {
-  margin: 5px 0;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.appcreation {
   font-size: 14px;
+  color: gray;
+}
+
+/* Buttons inside apps */
+.buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-btn {
+  background: cyan;
+  color: yellow;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.app-btn:hover {
+  background: yellow;
+  color: cyan;
+}
+
+/* Floating buttons */
+.float-btn {
+  position: fixed;
+  bottom: 10px;
+  background: yellow;
+  color: black;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.float-btn.right {
+  right: 10px;
+}
+
+.float-btn.left {
+  left: 10px;
 }
 
 /* Animation */
@@ -218,9 +270,9 @@ body {
   50% {
     background-color: yellow;
     color: cyan;
-    width: auto;
   }
 }
+
 
   </style>
 </html>
