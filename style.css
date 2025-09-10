@@ -8,6 +8,8 @@
 }
 .selected 
  margin-left: 100px;
+position: absolute;
  right: 100px;
  border: none;
+font-size: 35px;
 }
