@@ -48,12 +48,12 @@
 <script>
 function crea() {
 const saveButton = document.createElement('option');
-saveButton.innerHTML = document.getElementById("newf").innerHTML;
+saveButton.innerHTML = 'text/'+document.getElementById("newf").innerHTML;
 document.getElementById("format").appendChild(saveButton);
 };
 </script>
 </select>
-<p contenteditable="true" id="newf">text/newformat</p>
+<p contenteditable="true" id="newf">newformat</p>
 <button onclick="crea()">CREATE FORMAT</button>
 <p contenteditable="true" id="newfile">./File name</p>
 <button onclick="savecrea()">Save</button>
@@ -65,4 +65,5 @@ document.getElementById("format").appendChild(saveButton);
 <div style="display: none;" id="htm3">
 
 </div>
+
 
