@@ -13,27 +13,27 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/apps.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/apps</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/contact.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/contact</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/index.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/blog.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/blog</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/codedit.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/codedit</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -43,7 +43,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.goodieyahnz.com.ng/animakri.html</loc>
+  <loc>https://www.goodieyahnz.com.ng/animakri</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -70,6 +70,11 @@
 <url>
   <loc>https://www.goodieyahnz.com.ng/bukmak/</loc>
   <lastmod>2025-09-17T11:35:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.goodieyahnz.com.ng/animakri-v1</loc>
+        <lastmod>2025-09-17T11:35:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
