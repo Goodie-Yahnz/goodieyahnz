@@ -11,7 +11,7 @@
 <script type="text/javascript" src="hatever.js"></script>
 <title>Cod E Dit</title>
 <!-- Work space -->
-<p placeholder="" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true">Write your text code. You can code any language that can be edited using a normal text editor</p>
+<textarea placeholder="Write your text code. You can code any language that can be edited using a normal text editor" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true"></textarea>
 
 <p style="position: fixed; bottom: 10px; display: none;" contenteditable="true" id="framename">./Name.language</p>
 <button style="position: fixed; bottom: 10px; margin-left: 150px; display: none;" onclick="framenameok()" id="framenameok">OPEN PREVIEW FRAME</button>
@@ -53,8 +53,7 @@ saveButton.innerHTML = 'text/'+document.getElementById("newf").innerHTML;
 document.getElementById("format").appendChild(saveButton);
 };
  function savecrea() {
-  const blob = new Blob([
-"<html>" + document.getElementById('htm').innerHTML + "</html>"], { type: document.getElementById("format").value });
+  const blob = new Blob([ document.getElementById('htm').value], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
@@ -141,6 +140,7 @@ document.getElementById("htm").value = document.getElementById("htm3").innerHTML
 
 
 </script>
+
 
 
 
