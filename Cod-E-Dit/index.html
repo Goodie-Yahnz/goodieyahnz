@@ -54,7 +54,7 @@ document.getElementById("format").appendChild(saveButton);
 };
  function savecrea() {
   const blob = new Blob([
-const code = "<html>" + document.getElementById('htm').innerHTML + "</html>"], { type: document.getElementById("format").value });
+"<html>" + document.getElementById('htm').innerHTML + "</html>"], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
@@ -75,6 +75,7 @@ const code = "<html>" + document.getElementById('htm').innerHTML + "</html>"], {
 <div style="display: none;" id="htm3">
 
 </div>
+
 
 
 
