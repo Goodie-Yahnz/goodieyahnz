@@ -35,9 +35,9 @@ function savclick() {
 function saveclick() {
 	document.getElementById("full").style.display = "block";
 };
-const code = "<html>" + document.getElementById('htm').innerHTML + "</html>";
 function savecrea() {
-  const blob = new Blob([code], { type: document.getElementById("format").value });
+  const blob = new Blob([
+const code = "<html>" + document.getElementById('htm').innerHTML + "</html>"], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
@@ -57,5 +57,6 @@ document.getElementById("ret-div").style.color  = "grey";
 };
 document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
 document.getElementById("htm").value = document.getElementById("htm3").innerHTML;
+
 
 
