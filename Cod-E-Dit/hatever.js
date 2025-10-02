@@ -43,7 +43,7 @@ const code = "<html>" + document.getElementById('htm').innerHTML + "</html>"], {
   link.download = document.getElementById("newfile").innerHTML;
   link.click();*/
 
-};
+
 function closecrea() {
 	document.getElementById("full").style.display = "none";
 };
@@ -57,6 +57,7 @@ document.getElementById("ret-div").style.color  = "grey";
 };
 document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
 document.getElementById("htm").value = document.getElementById("htm3").innerHTML;
+
 
 
 
