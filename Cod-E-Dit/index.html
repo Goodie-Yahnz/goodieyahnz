@@ -52,6 +52,15 @@ const saveButton = document.createElement('option');
 saveButton.innerHTML = 'text/'+document.getElementById("newf").innerHTML;
 document.getElementById("format").appendChild(saveButton);
 };
+ function savecrea() {
+  const blob = new Blob([
+const code = "<html>" + document.getElementById('htm').innerHTML + "</html>"], { type: document.getElementById("format").value });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = document.getElementById("newfile").innerHTML;
+  link.click();
+
+};
 </script>
 </select>
 <p contenteditable="true" id="newf">newformat</p>
@@ -66,6 +75,7 @@ document.getElementById("format").appendChild(saveButton);
 <div style="display: none;" id="htm3">
 
 </div>
+
 
 
 
