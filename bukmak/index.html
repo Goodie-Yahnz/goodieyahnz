@@ -54,7 +54,7 @@ display : flex;
  function add() {
   let bukmak = document.createElement('option');
   bukmak.innerHTML = document.getElementById('addurl').value;
-  bukmak.id = document.getElementById('addurl').value;
+  bukmak.id = document.getElementById('addurl').value+'link';
   document.getElementById('urlbox').appendChild(bukmak);
   //deleting
    let bukmak2 = document.createElement('option');
@@ -64,6 +64,7 @@ display : flex;
  };
  function minus() {
   document.getElementById(document.getElementById('minusurl').value).remove();
+    document.getElementById(document.getElementById('minusurl').value+ 'link').remove();
  };
 </script>
 </head>
