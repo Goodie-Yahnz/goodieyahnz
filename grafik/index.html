@@ -106,7 +106,7 @@ document.getElementById('element-clip').value = document.getElementById(document
  <option>rgba(255, 255, 255, 0)</option>
  </select>
 <p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
-<select contenteditable='true' id="ele-cread"></select>
+<p id="gcolour">Gradient Colour</p>
  <select id="ele-cread-1">
    <option>linear-</option>
    <option>radial-</option>
@@ -115,9 +115,8 @@ document.getElementById('element-clip').value = document.getElementById(document
 <input id="ele-cread-2" type="color">
   <input id="ele-cread-3" type="color">
   <button onclick="
-    let gcolour = document.createElement('option');
     gcolour.innerHTML = document.getElementById('ele-cread-1').value+'gradient('+ document.getElementById('ele-cread-2').value+','+document.getElementById('ele-cread-3').value+')';
-    document.getElementById('ele-cread').appendChild(gcolour);">Add Gradient</button>
+    ">Select Gradient</button>
 <p>Border Type</p>
 <select id="ele-btyle">
 <option>solid</option>
