@@ -57,14 +57,8 @@ display : flex;
   bukmak.id = document.getElementById('addurl').value+'link';
   document.getElementById('urlbox').appendChild(bukmak);
   //deleting
-   let bukmak2 = document.createElement('option');
-  bukmak2.innerHTML = document.getElementById('addurl').value;
-  bukmak2.id = document.getElementById('addurl').value;
-  document.getElementById('minusurl').appendChild(bukmak2);
- };
  function minus() {
-  document.getElementById(document.getElementById('minusurl').value).remove();
-    document.getElementById(document.getElementById('minusurl').value+ 'link').remove();
+  document.getElementById(document.getElementById('urlbox').value).remove();
  };
 </script>
 </head>
@@ -76,9 +70,6 @@ display : flex;
 <button style=' background-color: yellow; border: none; color: cyan;' onclick="add()" id="add">+</button>
 <input id="addurl" placeholder="Write the name of your url" value="https://">
 <button style=' background-color: yellow; border: none; color: cyan;' onclick="minus()" id="minus">-</button>
-<select id="minusurl">
-<option>default</option>
-</select>
 <button style=' background-color: yellow; border: none; color: cyan;' onclick="window.close(document.location);"id="close">Close</button></header>
 </header>
 <div id="workspace">
