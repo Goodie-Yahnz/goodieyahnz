@@ -74,6 +74,14 @@ document.getElementById("format").appendChild(saveButton);
 <div style="display: none;" id="htm3">
 
 </div>
+	<script>
+
+	
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
+});
+
+	</script>
 <script>
  function saveToFile() {
   const blob = new Blob([codeInput.value], { type: 'text/html' });
@@ -132,14 +140,14 @@ document.getElementById("htm3").innerText = document.getElementById("htm").value
 document.getElementById("htm").value = document.getElementById("htm3").innerText;
 document.getElementById("ret-div").style.color  = "grey";
 };
-document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
-document.getElementById("htm").value = document.getElementById("htm3").innerHTML;
+
 
 
 
 
 
 </script>
+
 
 
 
