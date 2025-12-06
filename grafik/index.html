@@ -106,7 +106,7 @@ document.getElementById('element-clip').value = document.getElementById(document
  <option>rgba(255, 255, 255, 0)</option>
  </select>
 <p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
-<p id="gcolour">Gradient Colour</p>
+<p contenteditable="true" id="gcolour">Gradient Colour</p>
  <select id="ele-cread-1">
    <option>linear-</option>
    <option>radial-</option>
@@ -327,7 +327,7 @@ style.color='black';
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor = document.getElementById('ele-color').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius = document.getElementById('ele-rcs').innerHTML;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('ele-cread').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('gcolour').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle = document.getElementById('ele-btyle').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth = document.getElementById('ele-bidth').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.left = document.getElementById('ele-left').innerHTML;
