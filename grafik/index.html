@@ -146,8 +146,15 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>sea green</option>
    <option>rgba(255, 255, 255, 0)</option>
  </select>
-<p>Element position X</p><p id="ele-left" contenteditable="true">0</p>
-<p>Element position Y</p><p id="ele-top" contenteditable="true">0</p>
+<p>Element position X</p><p id="ele-left" contenteditable="true">0px</p>
+<p>Element position Y</p><p id="ele-top" contenteditable="true">0px</p>
+  
+<p>Element width</p><p id="ele-width" contenteditable="true">0px</p>
+<p>Element height</p><p id="ele-height" contenteditable="true">0px</p>
+  <script>
+   document.getElementById('ele-width').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.width;
+document.getElementById('ele-height').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.height; 
+  </script>
 <select id="element-display">
 <option>block</option>
 <option>none</option>
