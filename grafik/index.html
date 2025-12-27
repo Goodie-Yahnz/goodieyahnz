@@ -55,6 +55,8 @@ document.getElementById('ele-btyle').value = document.getElementById(document.ge
  document.getElementById('ele-bidth').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth; 
 document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
 document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top;
+ document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
+document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top; 
 /*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
 document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
  document.getElementById('element-display').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.display;
@@ -149,8 +151,8 @@ document.getElementById('element-clip').value = document.getElementById(document
 <p>Element position X</p><p id="ele-left" contenteditable="true">0px</p>
 <p>Element position Y</p><p id="ele-top" contenteditable="true">0px</p>
   
-<p>Element width</p><p id="ele-width" contenteditable="true">0px</p>
-<p>Element height</p><p id="ele-height" contenteditable="true">0px</p>
+<p>Element width</p><p id="ele-width" contenteditable="true">100px</p>
+<p>Element height</p><p id="ele-height" contenteditable="true">100px</p>
   <script>
    document.getElementById('ele-width').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.width;
 document.getElementById('ele-height').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.height; 
