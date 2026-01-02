@@ -50,13 +50,14 @@ onclick="window.open('./')"
  document.getElementById('sele').style.display = 'none';
 document.getElementById('ele-color').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor;
 document.getElementById('gcolour').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage;
-document.getElementById('ele-rcs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius; 
+document.getElementById('ele-rcs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius;
+document.getElementById('ele-bolor').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderColor;
 document.getElementById('ele-btyle').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle; 
  document.getElementById('ele-bidth').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth; 
 document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
 document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top;
- document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
-document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top; 
+ document.getElementById('ele-width').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
+document.getElementById('ele-height').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top; 
 /*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
 document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
  document.getElementById('element-display').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.display;
@@ -338,6 +339,7 @@ document.getElementById(document.getElementById('select-shape').innerHTML).style
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius = document.getElementById('ele-rcs').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('gcolour').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle = document.getElementById('ele-btyle').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderColor = document.getElementById('ele-bolor').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth = document.getElementById('ele-bidth').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.left = document.getElementById('ele-left').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.top = document.getElementById('ele-top').innerHTML;
