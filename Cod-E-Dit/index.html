@@ -11,7 +11,7 @@
 <script type="text/javascript" src="hatever.js"></script>
 <title>QuickCode Workspace</title>
 <!-- Work space -->
-<textarea placeholder="Write your text code. You can code any language that can be edited using a normal text editor" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true"></textarea>
+<p placeholder="Write your text code. You can code any language that can be edited using a normal text editor" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true"></p>
 
 <p style="position: fixed; bottom: 10px; display: none;" contenteditable="true" id="framename">./Name.language</p>
 <button style="position: fixed; bottom: 10px; margin-left: 150px; display: none;" onclick="framenameok()" id="framenameok">OPEN PREVIEW FRAME</button>
@@ -25,7 +25,7 @@
 <div onclick="runclick()" id="ope-div">Store text</div>
 <div onclick="saveclick()" id="save-div">Save as other formats</div>
 <div onclick="retclick()" id="ret-div">Retrieve code</div>
-<div onclick="cloclick()" id="clo-div">Close</div>
+<div onclick="cloclick()" id="clxo-div">Close</div>
 </div>
 
 
@@ -53,7 +53,8 @@ saveButton.innerHTML = 'text/'+document.getElementById("newf").innerHTML;
 document.getElementById("format").appendChild(saveButton);
 };
  function savecrea() {
-  const blob = new Blob([ document.getElementById('htm').value], { type: document.getElementById("format").value });
+  document.getElementById("htm3").value = document.getElementById("htm").innerHTML;
+  const blob = new Blob([ document.getElementById('htm3').value], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
@@ -71,14 +72,14 @@ document.getElementById("format").appendChild(saveButton);
 <div style="display: none;" id="htm2">
 
 </div>
-<div style="display: none;" id="htm3">
+<textarea style="display: none;" id="htm3">
 
-</div>
+</textarea>
 	<script>
 
 	
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("htm3").innerHTML = document.getElementById("htm").value;
+  document.getElementById("htm3").value = document.getElementById("htm").value;
 });
 
 	</script>
@@ -133,7 +134,7 @@ function closecrea() {
 	document.getElementById("full").style.display = "none";
 };
 function runclick() {
-document.getElementById("htm3").innerText = document.getElementById("htm").value;
+document.getElementById("htm3").value = document.getElementById("htm").innerHTML;
 };
   
   function retclick() {
@@ -147,6 +148,7 @@ document.getElementById("ret-div").style.color  = "grey";
 
 
 </script>
+
 
 
 
