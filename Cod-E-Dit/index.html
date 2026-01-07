@@ -53,12 +53,13 @@ saveButton.innerHTML = 'text/'+document.getElementById("newf").innerHTML;
 document.getElementById("format").appendChild(saveButton);
 };
  function savecrea() {
-  document.getElementById("htm3").value = document.getElementById("htm").innerHTML;
+
   const blob = new Blob([ document.getElementById('htm3').value], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
   link.click();
+	 document.getElementById("full").style.display = "none";
 
 };
 </script>
@@ -120,6 +121,7 @@ function savclick() {
 
 function saveclick() {
 	document.getElementById("full").style.display = "block";
+	document.getElementById("htm3").value = document.getElementById("htm").innerHTML;
 };
 /*function savecrea() {
   const blob = new Blob([
@@ -148,6 +150,7 @@ document.getElementById("ret-div").style.color  = "grey";
 
 
 </script>
+
 
 
 
