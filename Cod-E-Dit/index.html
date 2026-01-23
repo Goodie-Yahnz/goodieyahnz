@@ -28,14 +28,7 @@
 <div onclick="cloclick()" id="clxo-div">Close</div>
 </div>
 <div id="saqcw" style="display: none;"><input id="inputfile" type="text" placeholder="File Name">
-<button onclick="
-	const newfile = new Blob ([document.body.innerHTML], {type: text/html});
-	const filink = document.createElement('a');
-	filink.href = URL.createObjectURL(newfile);
-	filink.download = document.getElementById('inputfile').value; 
-	filink.click();
-	document.getElementById('saqcw').style.display = 'none';
-	"
+<button onclick="saveedit()"
 	>Save</button>
 </div>
 
@@ -153,13 +146,23 @@ document.getElementById("saqcw").style.display = "block";
 document.getElementById("htm").value = document.getElementById("htm3").innerText;
 document.getElementById("ret-div").style.color  = "grey";
 };
-
+function saveedit() {
+	
+	const newfile = new Blob ([document.body.innerHTML], {type: text/html});
+	const filink = document.createElement('a');
+	filink.href = URL.createObjectURL(newfile);
+	filink.download = document.getElementById('inputfile').value; 
+	filink.click();
+	document.getElementById('saqcw').style.display = 'none';
+	
+}
 
 
 
 
 
 </script>
+
 
 
 
