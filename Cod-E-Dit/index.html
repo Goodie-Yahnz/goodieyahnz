@@ -148,7 +148,7 @@ document.getElementById("ret-div").style.color  = "grey";
 };
 function saveedit() {
 	
-	const newfile = new Blob ([document.body.innerHTML], {type: text/html});
+	const newfile = new Blob ([document.body.innerHTML], {type: 'text/html'});
 	const filink = document.createElement('a');
 	filink.href = URL.createObjectURL(newfile);
 	filink.download = document.getElementById('inputfile').value; 
@@ -162,6 +162,7 @@ function saveedit() {
 
 
 </script>
+
 
 
 
