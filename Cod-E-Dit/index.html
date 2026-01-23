@@ -64,7 +64,7 @@ document.getElementById("format").appendChild(saveButton);
 };
  function savecrea() {
 
-  const blob = new Blob([ document.getElementById('htm3').value], { type: 'text/'+document.getElementById("format").value });
+  const blob = new Blob([ document.getElementById('htm3').value], { type: document.getElementById("format").value });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = document.getElementById("newfile").innerHTML;
@@ -160,6 +160,7 @@ document.getElementById("ret-div").style.color  = "grey";
 
 
 </script>
+
 
 
 
