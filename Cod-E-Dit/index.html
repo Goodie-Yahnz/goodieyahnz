@@ -11,7 +11,7 @@
 <script type="text/javascript" src="hatever.js"></script>
 <title>QuickCode Workspace</title>
 <!-- Work space -->
-<div placeholder="Write your text code. You can code any language that can be edited using a normal text editor" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: 500px;" class="workspace" id="htm" contenteditable="true">
+<div placeholder="Write your text code. You can code any language that can be edited using a normal text editor" style="positon: absolute; font-family: monospace; font-size: 35px; background-color: white; margin-top: 125px;   margin-left: 100px; right: 125px; bottom: 125px; width: 1150px; height: auto;" class="workspace" id="htm" contenteditable="true">
 </div>
 
 <p style="position: fixed; bottom: 10px; display: none;" contenteditable="true" id="framename">./Name.language</p>
@@ -25,14 +25,13 @@
 <div onclick="opeclick()" id="ope-div">Open</div>
 <div onclick="runclick()" id="ope-div">Save</div>
 <div onclick="saveclick()" id="save-div">Save as other formats</div>
-<div onclick="retclick()" id="ret-div">Retrieve code</div>
 <div onclick="cloclick()" id="clxo-div">Close</div>
 </div>
-<div id="saqcw"><input id="inputfile" type="text" placeholder="File Name">
+<div id="saqcw" style="display: none;"><input id="inputfile" type="text" placeholder="File Name">
 <button onclick="
 	const newfile = new Blob ([document.body.innerHTML], {type: text/html});
 	const filink = document.createElement('a');
-	filink.href = URL.document.createObjectURL(newfile);
+	filink.href = URL.createObjectURL(newfile);
 	filink.download = document.getElementById('inputfile').value; 
 	filink.click();
 	document.getElementById('saqcw').style.display = 'none';
@@ -147,7 +146,7 @@ function closecrea() {
 	document.getElementById("full").style.display = "none";
 };
 function runclick() {
-document.getElementById("saqcw").style.display = "inline";
+document.getElementById("saqcw").style.display = "block";
 };
   
   function retclick() {
@@ -161,6 +160,7 @@ document.getElementById("ret-div").style.color  = "grey";
 
 
 </script>
+
 
 
 
