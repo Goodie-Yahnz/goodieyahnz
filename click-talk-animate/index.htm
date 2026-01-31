@@ -70,7 +70,7 @@ border: none;
 border-radius: 5px;
 position: absolute;
 top: 40px;
-left: 730px;
+left: 780px;
 " onclick="
 document.getElementById('bgimg').src =
 document.getElementById(document.getElementById('environments').value).src
@@ -227,8 +227,7 @@ right: 100px; bottom: 100px; height: auto; background-color : yellow;">
 </div>
 <style>
 @keyframes breath {
-50%{height: 315px;
-    width: 190px;}
+50%{height: 85px;}
 }
 </style>
 <script>
@@ -244,18 +243,16 @@ document.getElementById('bgimg').style.display = 'none';    
 <div style="display: none;">
 <img src="environments/Slide1.PNG" id="Plain">
 <img src="environments/Slide2.PNG" id="Dawn">
-
-
 <img src="environments/Slide3.PNG" id="Day">
-
-
 <img src="environments/Slide4.PNG" id="Dusk">
-
-
 <img src="environments/Slide5.PNG" id="Night">
-
-
 <img src="environments/Slide6.PNG" id="Space">
-
-
-</div></body></html>
+</div>
+<style>
+  #desbody {
+    animation-name: breath;
+    animation-duration: 1s;
+    animation-iteration-count: 100000000000000000000000000000000000000000000;
+  }
+</style>
+</body></html>
