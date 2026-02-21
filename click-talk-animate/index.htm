@@ -254,12 +254,55 @@ document.getElementById('bgimg').style.display = 'none';    
     animation-iteration-count: 100000000000000000000000000000000000000000000;
   }
 </style>
-  <div id="edition" style="width: 500px; height: auto;">
+  <div id="edition" style="position:absolute; top: 1500px; width: 500px; height: auto;">
     <button onclick="
     document.getElementById('deshair2').style.display = 'none';
     document.getElementById('deseye1').style.display = 'block';
     document.getElementById('deseye2').style.display = 'block';
+    document.getElementById('desnose').style.left = '35px';
+    document.getElementById('desmouth').style.left = '30px';
     document.getElementById('deshair2').style.left = '-20px';
       ">Front</button> &nbsp;
+    <button onclick="
+    document.getElementById('deshair2').style.display = 'block';
+    document.getElementById('deshair2').style.left = '45px';
+    document.getElementById('deseye1').style.display = 'block';
+    document.getElementById('deseye2').style.display = 'none';
+    document.getElementById('desnose').style.left = '5px';
+    document.getElementById('desmouth').style.left = '5px';
+      ">Left</button> &nbsp;
+    <button onclick="
+    document.getElementById('deshair2').style.display = 'none';
+    document.getElementById('deseye1').style.display = 'none';
+    document.getElementById('deseye2').style.display = 'block';
+    document.getElementById('desnose').style.left = '35px';
+    document.getElementById('desmouth').style.left = '35px';
+    document.getElementById('deshair2').style.left = '-20px';
+      ">Right</button> &nbsp;
+    <button onclick="
+    document.getElementById('deshair2').style.display = 'none';
+    document.getElementById('deseye1').style.display = 'none';
+    document.getElementById('deseye2').style.display = 'block';
+    document.getElementById('desnose').style.left = '35px';
+    document.getElementById('desmouth').style.left = '35px';
+    document.getElementById('deshair2').style.left = '-20px';
+      ">Right</button>
+    <p>Hair Color</p>
+    <input id="hair-color1" type='color'>
+    <input id="hair-color2" type='color'> 
+        <p>Iris Color</p>
+    <input id="iris-color1" type='color'>
+    <input id="iris-color2" type='color'> 
+        <p>Sclera Color</p>
+    <input id="scl-color1" type='color'>
+    <input id="scl-color2" type='color'> 
+        <p>Lips Color</p>
+    <input id="lips-color1" type='color'>
+    <input id="lips-color2" type='color'> 
+      <p>Lips Size</p>
+    <input id="lips-size" type='number'>
+          <p>Skin Color</p>
+    <input id="skin-color1" type='color'>
+    <input id="skin-color2" type='color'>
   </div>
 </body></html>
