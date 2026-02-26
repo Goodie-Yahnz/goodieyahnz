@@ -308,23 +308,23 @@ document.getElementById('bgimg').style.display = 'none';    
           <p>Skin Color</p>
     <input id="skin-color1" type='color'>
     <input id="skin-color2" type='color'>
-  </div>
+
             <p>Shirt Color</p>
     <input id="sh-color1" type='color'>
     <input id="sh-color2" type='color'>
-  </div>
+  
           <p>Leg Color</p>
     <input id="leg-color1" type='color'>
     <input id="leg-color2" type='color'>
-  </div>
+
             <p>Short/Skirt Color</p>
     <input id="shr-color1" type='color'>
     <input id="shr-color2" type='color'>
-  </div>
+
       <p>Position X</p>
-    <input id="x-size" type='number'>
+    <input id="x-size"value="30px" type='number'>
         <p>Position Y</p>
-    <input id="x-size" type='number'>
+    <input id="y-size" value="70px" type='number'>
 
   <button onclick="
     document.getElementById('deskirt').style.display = 'none';
@@ -349,4 +349,5 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('desbody').backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     document.querySelectorAll('#deskirt, #short').backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     ">OK</button>
+  </div>
 </body></html>
