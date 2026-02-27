@@ -297,10 +297,10 @@ document.getElementById('bgimg').style.display = 'none';    
     <input id="hair-color2" type='color'> 
         <p>Iris Color</p>
     <input id="iris-color1" type='color'>
-    <input id="iris-color2" type='color'> 
+ 
         <p>Sclera Color</p>
     <input id="scl-color1" type='color'>
-    <input id="scl-color2" type='color'> 
+ 
         <p>Lips Color</p>
     <input id="lips-color1" type='color'>
     <input id="lips-color2" type='color'> 
@@ -343,10 +343,10 @@ document.getElementById('bgimg').style.display = 'none';    
     <button onclick="
     document.getElementById('deshair').style.backgroundImage = 'linear-gradient('+document.getElementById('hair-color1').value+','+document.getElementById('hair-color2').value+')'; 
     document.getElementById('deshair2').style.backgroundImage = 'linear-gradient('+document.getElementById('hair-color1').value+','+document.getElementById('hair-color2').value+')';
-    document.getElementById('deseye1').style.backgroundImage = 'linear-gradient('+document.getElementById('iris-color1').value+','+document.getElementById('iris-color2').value+')';
-    document.getElementById('deseye2').style.backgroundImage = 'linear-gradient('+document.getElementById('iris-color1').value+','+document.getElementById('iris-color2').value+')';
-    document.getElementById('deseye1').style.borderImage = 'linear-gradient('+document.getElementById('scl-color1').value+','+document.getElementById('scl-color2').value+')';
-    document.getElementById('deseye2').style.borderImage = 'linear-gradient('+document.getElementById('scl-color1').value+','+document.getElementById('scl-color2').value+')';
+    document.getElementById('deseye1').style.backgroundImage = document.getElementById('iris-color1').value;
+    document.getElementById('deseye2').style.backgroundImage = document.getElementById('iris-color1').value;
+    document.getElementById('deseye1').style.borderColor = document.getElementById('scl-color1').value;
+    document.getElementById('deseye2').style.borderColor = document.getElementById('scl-color1').value;
     document.querySelectorAll('#desface, #deshand1, #deshand2').style.backgroundImage = 'linear-gradient('+document.getElementById('scl-color1').value+','+document.getElementById('scl-color2').value+')';
     document.getElementById('desbody').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     document.querySelectorAll('#deskirt, #short').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
