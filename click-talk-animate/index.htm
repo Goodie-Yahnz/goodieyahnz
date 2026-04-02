@@ -175,13 +175,21 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-document.getElementById('w-background').style.width = '828px';
-document.getElementById('w-background').style.height = '360px';
-document.getElementById('w-background').style.left = '50%';
-document.getElementById('bgimg').style.width = '100%';
-document.getElementById('bgimg').style.height = '100%';
+  document.getElementById('audio-talk').controls = document.getElementById('audio-talk').value;  
+">Upload Audio</button>
+  <input type='text' placeholder="Type the url of your audio" id="audio-url">
+  <audio controls id="audio-talk"></audio>
+  
+  <button style="
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+    document.getElementById('desmouth').animationName = 'talker';
 ">&#9654;</button>
-
 
 
 
