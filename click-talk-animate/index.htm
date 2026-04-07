@@ -175,10 +175,10 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-  document.getElementById('audio-talk').src = document.getElementById('audio-talk').value;  
+  document.getElementById('audio-talk').src = document.getElementById('audio-url').value;  
 ">Upload Audio</button>
   <input type='text' placeholder="Type the url of your audio" id="audio-url">
-  <audio controls id="audio-talk"></audio>
+  <audio style="display: none;" controls id="audio-talk"></audio>
   
   <button style="
 background-color: yellow;
@@ -205,7 +205,7 @@ border-radius: 5px;
     document.getElementById('desmouth').animationDuration = '2s';
     document.getElementById('desmouth').animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     document.getElementById('audio-talk').pause()
-">&#9208;</button>
+">Pause</button>
  <button style="
 background-color: yellow;
 font-family: Century gothic;
@@ -219,8 +219,16 @@ border-radius: 5px;
     document.getElementById('desmouth').animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     document.getElementById('audio-talk').pause()
     document.getElementById('audio-talk').currentTime = 0;
-">&#9209;</button>
-
+">Stop</button>
+<style>
+  @keyframes talker {
+    0% {height: 1px;}
+    40% {height: 1px;}
+    50% {height: 15px;}
+    60% {height: 1px;}
+    100% {height: 1px;}
+  }
+  </style>
 
 
 
