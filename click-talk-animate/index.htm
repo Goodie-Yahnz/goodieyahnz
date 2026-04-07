@@ -188,9 +188,9 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').animationName = 'talker';
-    document.getElementById('desmouth').animationDuration = '2s';
-    document.getElementById('desmouth').animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
+    document.getElementById('desmouth').style.animationName = 'talker';
+    document.getElementById('desmouth').style.animationDuration = '2s';
+    document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     document.getElementById('audio-talk').play()
 ">&#9654;</button>
   <button style="
@@ -201,9 +201,9 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').animationName = 'talke';
-    document.getElementById('desmouth').animationDuration = '2s';
-    document.getElementById('desmouth').animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
+    document.getElementById('desmouth').style.animationName = 'talke';
+    document.getElementById('desmouth').style.animationDuration = '2s';
+    document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     document.getElementById('audio-talk').pause()
 ">Pause</button>
  <button style="
@@ -214,12 +214,26 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').animationName = 'talke';
-    document.getElementById('desmouth').animationDuration = '2s';
-    document.getElementById('desmouth').animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
+    document.getElementById('desmouth').style.animationName = 'talke';
+    document.getElementById('desmouth').style.animationDuration = '2s';
+    document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     document.getElementById('audio-talk').pause()
     document.getElementById('audio-talk').currentTime = 0;
 ">Stop</button>
+   <button style="
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+    document.getElementById('desmouth').style.animationName = 'talke';
+    document.getElementById('desmouth').style.animationDuration = '2s';
+    document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
+    document.getElementById('audio-talk').pause()
+    document.getElementById('audio-talk').currentTime += 10;
+">Move 10 secs</button>
 <style>
   @keyframes talker {
     0% {height: 1px;}
