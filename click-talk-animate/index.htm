@@ -93,11 +93,11 @@ border-radius: 5px;
   saveimg.innerHTML = document.getElementById('img-url').value;
   document.getElementById('imgurls').appendChild(savedimg);
 ">Upload Image</button>
-  <p id="ntex1">url('</p>
-    <p id="ntex2">')</p>
+  <p style="display: none;" id="ntex1">url('</p>
+    <p style=' display: none;' id="ntex2">')</p>
   <select style='position: absolute;
 top: 40px;
-left: 1050px;'id="imgurls"></select>
+left: 1050px;'id="imgurls"><option></option></select>
   <input style="position: absolute;
 top: 40px;
 left: 1000px;"
@@ -416,6 +416,22 @@ document.getElementById('bgimg').style.display = 'none';    
 <img src="https://www.goodieyahnz.com.ng/environments2/9.png" id="Snowy">
 </div>
 <style>
+    #deseye1 {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 100000000000000000000000000000000000000000000;
+    animation-timing-function: ease-out;
+  }
+    #deseye2 {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 100000000000000000000000000000000000000000000;
+  }
+  @keyframes blink {
+    0% {height: 8px;}
+    50% {height: 0px;}
+    100% {height: 8px;}
+  }
   #desbody {
     animation-name: breath;
     animation-duration: 1s;
@@ -472,10 +488,12 @@ document.getElementById('bgimg').style.display = 'none';    
 ">Unhappy</button>
     <p>Eye Emotions</p>
       <button onclick="
-    document.getElementById('desmouth').style.borderRadius = '50px 50px 100px 100px';
+    document.getElementById('deseye1').style.borderRadius = '50px 50px 100px 100px';
+    document.getElementById('deseye2').style.borderRadius = '50px 50px 100px 100px';
 ">Angry</button>
      <button onclick="
-    document.getElementById('desmouth').style.borderRadius = '100px';
+    document.getElementById('deseye1').style.borderRadius = '100px';
+    document.getElementById('deseye2').style.borderRadius = '100px';
 ">Neutral</button>
     <p>Left Eye Rotation</p>
     <input id="range1" type="range" max="45" min="-45">
