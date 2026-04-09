@@ -75,6 +75,25 @@ left: 780px;
 document.getElementById('bgimg').src =
 document.getElementById(document.getElementById('environments').value).src
 ">OK</button>
+<button style="
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+  let bg = document.createElement('img');
+  bg.id = document.getElementById('img-url').value;
+  bg.src = document.getElementById('img-url').value;
+  document.getElementById('environ').appendChild(bg);
+    let bgopt = document.createElement('option');
+  bgopt.innerHTML = document.getElementById('img-url').value;
+  document.getElementById('environments').appendChild(bgopt);
+">Upload Image</button>
+  <input onclick="
+    alert('The name of the file should not have quotation marks');
+    " type='text' placeholder="Type the url of your img" id="img-url">
 
 
 
@@ -178,7 +197,7 @@ border-radius: 5px;
   document.getElementById('audio-talk').src = document.getElementById('audio-url').value;  
 ">Upload Audio</button>
   <input type='text' placeholder="Type the url of your audio" id="audio-url">
-  <audio style="opacity: 0;" controls id="audio-talk"></audio>
+  <audio style="position: absolue; opacity: 0;" controls id="audio-talk"></audio>
   
   <button style="
 background-color: yellow;
@@ -231,8 +250,22 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationName = 'talke';
     document.getElementById('desmouth').style.animationDuration = '0.5s';
     document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
-    document.getElementById('audio-talk').pause()
-    document.getElementById('audio-talk').currentTime += 10;
+    
+    document.getElementById('audio-talk').currentTime -= 10;
+">Move Back 10 secs</button>
+   <button style="
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+    document.getElementById('desmouth').style.animationName = 'talke';
+    document.getElementById('desmouth').style.animationDuration = '0.5s';
+    document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
+    
+    document.getElementById('audio-talk').currentTime -= 10;
 ">Move 10 secs</button>
 <style>
   @keyframes talker {
@@ -326,10 +359,16 @@ document.getElementById('bgimg').style.display = 'none';    
 
 
 
-<div style="display: none;">
+<div id="environmental" style="display: none;">
 <img src="environments/Slide1.PNG" id="Plain">
 <img src="environments/Slide2.PNG" id="Dawn">
 <img src="environments/Slide3.PNG" id="Day">
+<img src="environments/Slide4.PNG" id="Dusk">
+<img src="environments/Slide5.PNG" id="Night">
+<img src="environments/Slide6.PNG" id="Space">
+<img src="environments/1.png" id="Plain">
+<img src="environments/2.png" id="Dawn">
+<img src="environments/3.png" id="Day">
 <img src="environments/Slide4.PNG" id="Dusk">
 <img src="environments/Slide5.PNG" id="Night">
 <img src="environments/Slide6.PNG" id="Space"></div>
