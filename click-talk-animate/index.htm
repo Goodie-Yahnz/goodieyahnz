@@ -87,12 +87,17 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-  alert('The name of the file should not have quotation marks');
-    
-  document.getElementById('w-background').style.backgroundImage = document.getElementById('ntex1').innerHTML + document.getElementById('img-url').value + document.getElementById('ntex2').innerHTML  
+ 
+  document.getElementById('w-background').style.backgroundImage = document.getElementById('ntex1').innerHTML + document.getElementById('img-url').value + document.getElementById('ntex2').innerHTML;
+  const savedimg = document.createElement('option');
+  saveimg.innerHTML = document.getElementById('img-url').value;
+  document.getElementById('imgurls').appendChild(savedimg);
 ">Upload Image</button>
   <p id="ntex1">url('</p>
     <p id="ntex2">')</p>
+  <select style='position: absolute;
+top: 40px;
+left: 1050px;'id="imgurls"></select>
   <input style="position: absolute;
 top: 40px;
 left: 1000px;"
@@ -470,7 +475,7 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('desmouth').style.borderRadius = '50px 50px 100px 100px';
 ">Angry</button>
      <button onclick="
-    document.getElementById('desmouth').style.borderRadius = '100pxpx';
+    document.getElementById('desmouth').style.borderRadius = '100px';
 ">Neutral</button>
     <p>Left Eye Rotation</p>
     <input id="range1" type="range" max="45" min="-45">
