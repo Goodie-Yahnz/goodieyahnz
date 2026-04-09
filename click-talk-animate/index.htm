@@ -87,6 +87,8 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
+  alert('The name of the file should not have quotation marks');
+    
   let bg = document.createElement('img');
   bg.id = document.getElementById('img-url').value;
   bg.src = document.getElementById('img-url').value;
@@ -98,12 +100,7 @@ border-radius: 5px;
   <input style="position: absolute;
 top: 40px;
 left: 1000px;" onclick="
-    alert('The name of the file should not have quotation marks');
-    " type='text' placeholder="Type the url of your img" id="img-url">
-
-
-
-
+     type='text' placeholder="Type the url of your img" id="img-url">
 </header>
 <header style="
 background-color: rgb(100, 100, 0);
@@ -472,6 +469,13 @@ document.getElementById('bgimg').style.display = 'none';    
      <button onclick="
     document.getElementById('desmouth').style.borderRadius = '100px 100px 0 0';
 ">Unhappy</button>
+    <p>Eye Emotions</p>
+      <button onclick="
+    document.getElementById('desmouth').style.borderRadius = '50px 50px 100px 100px';
+">Angry</button>
+     <button onclick="
+    document.getElementById('desmouth').style.borderRadius = '100pxpx';
+">Neutral</button>
     <p>Left Eye Rotation</p>
     <input id="range1" type="range" max="45" min="-45">
   <p>Right Eye Rotation</p>
