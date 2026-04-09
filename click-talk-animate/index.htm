@@ -304,7 +304,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationDuration = '0.5s';
     document.getElementById('desmouth').style.animationIterationCount = '999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999';
     
-    document.getElementById('audio-talk').currentTime -= 10;
+    document.getElementById('audio-talk').currentTime += 10;
 ">Move 10 secs</button>
 <style>
   @keyframes talker {
@@ -366,7 +366,7 @@ bottom: 0px;
 
 <div  style="height: auto; position: absolute; top: 70px; left: 30px;animation-name: character; animation-duration: 3s; animation-iteration-count: 100000000;" id="desire">
 <div id="deshair2" style="background-color: rgb(0, 0, 0); height: 80px; overflow: auto; position: absolute; top: 30px; left: -20px; border-radius: 100px 100px 0px 0px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; color: red; width: 44px; z-index: 1;"></div>  
-<div id="deshair" style="background-color: rgb(0, 0, 0); width: 88px; height: 100px; ; overflow: auto; position: absolute; left: -10px; border-radius: 100px 100px 0px 0px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; color: red;"></div> 
+<div id="deshair" style="background-color: rgb(0, 0, 0); width: 88px; height: 80px; ; overflow: auto; position: absolute; left: -10px; border-radius: 100px 100px 0px 0px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; color: red;"></div> 
 <div id="desface" style="background-color: rgb(239, 238, 176); width: 71px; height: 75px; ; overflow: auto; position: absolute; border-radius: 100px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; left: 0px; top: 30px; rotate: 0deg; color: red;"></div>  
 <div id="deseye1" class="eyes" style="rotate: 30deg; background-color: black; width: 8px; height: 8px; overflow: auto; position: absolute; border-radius: 100px; border-width: 10px; border-color: white; border-style: solid; left: 15px; top: 40px; color: red;"></div>
 <div id="deseye2" class="eyes" style="background-color: black; width: 8px; height: 8px; ; overflow: auto; position: absolute; border-radius: 100px; border-width: 10px; border-color: white; border-style: solid; left: 36px; top: 40px; color: red; font-size: 50px;"></div>
@@ -418,18 +418,20 @@ document.getElementById('bgimg').style.display = 'none';    
 <style>
     #deseye1 {
     animation-name: blink;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: 100000000000000000000000000000000000000000000;
     animation-timing-function: ease-out;
   }
     #deseye2 {
     animation-name: blink;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: 100000000000000000000000000000000000000000000;
   }
   @keyframes blink {
     0% {height: 8px;}
-    50% {height: 0px;}
+    40% {height: 8px; width: 8px;}
+    50% {height: 0px; width: 0px;}
+    60% {height: 8px; width: 8px;}
     100% {height: 8px;}
   }
   #desbody {
@@ -499,7 +501,8 @@ document.getElementById('bgimg').style.display = 'none';    
     <input id="range1" type="range" max="45" min="-45">
   <p>Right Eye Rotation</p>
     <input id="range2" type="range" max="45" min="-45">
-
+<p>Hair Size</p>
+    <input id="range3" value="80"  type="range" max="200" min="0">
     <p>Hair Color</p>
     <input id="hair-color1" type='color'>
     <input id="hair-color2" type='color'> 
@@ -507,7 +510,7 @@ document.getElementById('bgimg').style.display = 'none';    
     <input id="iris-color1" type='color'>
  
         <p>Sclera Color</p>
-    <input id="scl-color1" type='color'>
+    <input id="scl-color1" value="rgb(255, 255, 255)" type='color'>
  
         <p>Lips Color</p>
     <input id="lips-color1" type='color'>
@@ -573,6 +576,8 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('limb2').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     document.getElementById('deseye1').style.rotate = document.getElementById('range1').value + 'deg';
     document.getElementById('deseye2').style.rotate = document.getElementById('range2').value + 'deg';
+    document.getElementById('deshair').style.height = document.getElementById('range3').value + 'px';
+    document.getElementById('deshair2').style.rotate = document.getElementById('range3').value + 'px';
     ">OK</button>
   </div>
 </body></html>
