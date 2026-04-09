@@ -89,17 +89,13 @@ border-radius: 5px;
 " onclick="
   alert('The name of the file should not have quotation marks');
     
-  const bg = document.createElement('img');
-  bg.id = document.getElementById('img-url').value;
-  bg.src = document.getElementById('img-url').value;
-  document.getElementById('environ').appendChild(bg);
-    const bgopt = document.createElement('option');
-  bgopt.innerHTML = document.getElementById('img-url').value;
-  document.getElementById('environments').appendChild(bgopt);
+  document.getElementById('w-background').style.backgroundImage = document.getElementById('ntex1').innerHTML + document.getElementById('img-url').value + document.getElementById('ntex2').innerHTML  
 ">Upload Image</button>
+  <p id="ntex1">url('</p>
+    <p id="ntex2">')</p>
   <input style="position: absolute;
 top: 40px;
-left: 1000px;" onclick="
+left: 1000px;"
      type='text' placeholder="Type the url of your img" id="img-url">
 </header>
 <header style="
