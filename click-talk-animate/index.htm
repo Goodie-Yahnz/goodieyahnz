@@ -76,6 +76,9 @@ document.getElementById('bgimg').src =
 document.getElementById(document.getElementById('environments').value).src
 ">OK</button>
 <button style="
+  position: absolute;
+top: 40px;
+left: 850px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -91,7 +94,9 @@ border-radius: 5px;
   bgopt.innerHTML = document.getElementById('img-url').value;
   document.getElementById('environments').appendChild(bgopt);
 ">Upload Image</button>
-  <input onclick="
+  <input style="position: absolute;
+top: 40px;
+left: 930px;" onclick="
     alert('The name of the file should not have quotation marks');
     " type='text' placeholder="Type the url of your img" id="img-url">
 
@@ -116,6 +121,9 @@ font-family: Century gothic;
 font-weight: bold;
 " id="appname">Background ratio</p>
 <button style="
+  position: absolute;
+  top: 30px;
+  left: 20px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -130,6 +138,9 @@ document.getElementById('bgimg').style.width = '100%';
 document.getElementById('bgimg').style.height = '100%';&nbsp;
 ">16 : 9</button>
 <button style="
+  position: absolute;
+  top: 30px;
+  left: 120px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -144,6 +155,9 @@ document.getElementById('bgimg').style.width = '100%';
 document.getElementById('bgimg').style.height = '100%';&nbsp;
 ">1 : 1</button>
 <button style="
+  position: absolute;
+  top: 30px;
+  left: 220px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -158,6 +172,9 @@ document.getElementById('bgimg').style.width = '100%';
 document.getElementById('bgimg').style.height = '100%';&nbsp;
 ">4 : 3</button>
 <button style="
+  position: absolute;
+  top: 30px;
+  left: 320px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -172,6 +189,9 @@ document.getElementById('bgimg').style.width = '100%';
 document.getElementById('bgimg').style.height = '100%';&nbsp;
 ">3 : 4</button>
 <button style="
+  position: absolute;
+  top: 30px;
+  left: 420px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -187,6 +207,9 @@ document.getElementById('bgimg').style.height = '100%';&nbsp;
 ">23 : 10(Goodie Yahnz Style)</button>
 
   <button style="
+    position: absolute;
+  top: 30px;
+  left: 520px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -196,10 +219,15 @@ border-radius: 5px;
 " onclick="
   document.getElementById('audio-talk').src = document.getElementById('audio-url').value;  
 ">Upload Audio</button>
-  <input type='text' placeholder="Type the url of your audio" id="audio-url">
+  <input type='text' style="position: absolute;
+  top: 30px;
+  left: 620px;" placeholder="Type the url of your audio" id="audio-url">
   <audio style="position: absolue; opacity: 0;" controls id="audio-talk"></audio>
   
   <button style="
+    position: absolute;
+  top: 30px;
+  left: 740px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -213,6 +241,9 @@ border-radius: 5px;
     document.getElementById('audio-talk').play()
 ">&#9654;</button>
   <button style="
+    position: absolute;
+  top: 30px;
+  left: 790px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -226,6 +257,9 @@ border-radius: 5px;
     document.getElementById('audio-talk').pause()
 ">Pause</button>
  <button style="
+   position: absolute;
+  top: 30px;
+  left: 890px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -240,6 +274,9 @@ border-radius: 5px;
     document.getElementById('audio-talk').currentTime = 0;
 ">Stop</button>
    <button style="
+     position: absolute;
+  top: 30px;
+  left: 1090px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -254,6 +291,9 @@ border-radius: 5px;
     document.getElementById('audio-talk').currentTime -= 10;
 ">Move Back 10 secs</button>
    <button style="
+     position: absolute;
+  top: 30px;
+  left: 1190px;
 background-color: yellow;
 font-family: Century gothic;
 font-weight: bold;
@@ -366,12 +406,16 @@ document.getElementById('bgimg').style.display = 'none';    
 <img src="environments/Slide4.PNG" id="Dusk">
 <img src="environments/Slide5.PNG" id="Night">
 <img src="environments/Slide6.PNG" id="Space">
-<img src="environments/1.png" id="Plain">
-<img src="environments/2.png" id="Dawn">
-<img src="environments/3.png" id="Day">
-<img src="environments/Slide4.PNG" id="Dusk">
-<img src="environments/Slide5.PNG" id="Night">
-<img src="environments/Slide6.PNG" id="Space"></div>
+<img src="environments/1.png" id="City">
+<img src="environments/2.png" id="Countryside">
+<img src="environments/3.png" id="Farm">
+<img src="environments/4.png" id="Desert">
+<img src="environments/5.png" id="School">
+<img src="environments/6.png" id="Classroom">
+<img src="environments/7.png" id="Bedroom">
+<img src="environments/8.png" id="Bathroom">
+<img src="environments/9.png" id="Snowy">
+</div>
 <style>
   #desbody {
     animation-name: breath;
