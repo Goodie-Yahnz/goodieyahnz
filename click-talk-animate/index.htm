@@ -467,15 +467,15 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('desmouth').style.borderRadius = '0 0 100px 100px';
 ">Happy</button>
      <button onclick="
-    document.getElementById('desmouth').style.borderRadius = '0 0 100px 100px';
+    document.getElementById('desmouth').style.borderRadius = '10px';
 ">Neutral</button>
      <button onclick="
-    document.getElementById('desmouth').style.borderRadius = '0 0 100px 100px';
+    document.getElementById('desmouth').style.borderRadius = '100px 100px 0 0';
 ">Unhappy</button>
     <p>Left Eye Rotation</p>
-    <input max="45" min="-45">
+    <input id="range1" type="range" max="45" min="-45">
   <p>Right Eye Rotation</p>
-    <input max="45" min="-45">
+    <input id="range2" type="range" max="45" min="-45">
 
     <p>Hair Color</p>
     <input id="hair-color1" type='color'>
@@ -548,7 +548,8 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('deskirt').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     document.getElementById('limb1').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
     document.getElementById('limb2').style.backgroundImage = 'linear-gradient('+document.getElementById('shr-color1').value+','+document.getElementById('shr-color2').value+')';
-
+    document.getElementById('deseye1').style.rotate = document.getElementById('range1').value + 'deg';
+    document.getElementById('deseye2').style.rotate = document.getElementById('range2').value + 'deg';
     ">OK</button>
   </div>
 </body></html>
