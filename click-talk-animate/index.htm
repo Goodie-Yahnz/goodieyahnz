@@ -87,7 +87,7 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
- 
+  document.getElementById('w-background').style.backgroundImage = 'none';
   document.getElementById('bgimg').src = document.getElementById('img-url').value;
   const savedimg = document.createElement('option');
   saveimg.innerHTML = document.getElementById('img-url').value;
@@ -239,7 +239,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
     document.getElementById('desire').style.animationName = 'move';
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';;
+    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').play()
 ">&#9654;</button>
   <button style="
@@ -277,7 +277,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
 document.getElementById('desire').style.animationName = 'mo';
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';;
+    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
 
     document.getElementById('audio-talk').pause();
     document.getElementById('audio-talk').currentTime = 0;
@@ -298,7 +298,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
     document.getElementById('desire').style.animationName = 'move';
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';;
+    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').currentTime -= 10;
 ">Move Back 10 secs</button>
    <button style="
@@ -317,7 +317,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
     document.getElementById('desire').style.animationName = 'move';
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';;
+    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').currentTime += 10;
 ">Move 10 secs</button>
   <button style="
@@ -480,40 +480,51 @@ document.getElementById('bgimg').style.display = 'none';    
 </style>
   <div id="edition" style="position:absolute; color: white; top: 800px; width: 500px; height: auto;">
     <button onclick="
-    document.getElementById('deshair2').style.display = 'none';
+    document.getElementById('deshair2').style.opacity = '0';
     document.getElementById('deseye1').style.display = 'block';
     document.getElementById('deseye2').style.display = 'block';
     document.getElementById('desnose').style.left = '35px';
     document.getElementById('desmouth').style.left = '30px';
     document.getElementById('deshair2').style.left = '-20px';
                 document.getElementById('deshair').style.zIndex = '0';
+      
+          document.getElementById('desnose').style.opacity = '1';
+    document.getElementById('desmouth').style.opacity = '1';
       ">Front</button> &nbsp;
     <button onclick="
     document.getElementById('deshair2').style.display = 'block';
     document.getElementById('deshair2').style.left = '45px';
     document.getElementById('deseye1').style.display = 'block';
-    document.getElementById('deseye2').style.display = 'none';
+    document.getElementById('deseye2').style.opacity = '0';
     document.getElementById('desnose').style.left = '3px';
     document.getElementById('desmouth').style.left = '13px';
                 document.getElementById('deshair').style.zIndex = '0';
+      
+          document.getElementById('desnose').style.opacity = '1';
+    document.getElementById('desmouth').style.opacity = '1';
       ">Left</button> &nbsp;
     <button onclick="
     document.getElementById('deshair2').style.display = 'block';
-    document.getElementById('deseye1').style.display = 'none';
+    document.getElementById('deseye1').style.opacity = '0';
     document.getElementById('deseye2').style.display = 'block';
     document.getElementById('desnose').style.left = '52px';
     document.getElementById('desmouth').style.left = '47px';
     document.getElementById('deshair2').style.left = '-20px';
           document.getElementById('deshair').style.zIndex = '0';
+      
+          document.getElementById('desnose').style.opacity = '1';
+    document.getElementById('desmouth').style.opacity = '1';
       ">Right</button> &nbsp;
     <button onclick="
-    document.getElementById('deshair2').style.display = 'none';
-    document.getElementById('deseye1').style.display = 'none';
+    document.getElementById('deshair2').style.opacity = '0';
+    document.getElementById('deseye1').style.opacity = '0';
     document.getElementById('deseye2').style.display = 'block';
     document.getElementById('desnose').style.left = '35px';
     document.getElementById('desmouth').style.left = '35px';
     document.getElementById('deshair2').style.left = '-20px';
       document.getElementById('deshair').style.zIndex = '1';
+          document.getElementById('desnose').style.opacity = '0';
+    document.getElementById('desmouth').style.opacity = '0';
       
       ">Back</button>
     <p>Emotions</p>
@@ -574,19 +585,19 @@ document.getElementById('bgimg').style.display = 'none';    
     <input id="y-size" value="70" type='number'>
 
   <button onclick="
-    document.getElementById('deskirt').style.display = 'none';
-    document.getElementById('shorts').style.display = 'none';
+    document.getElementById('deskirt').style.opacity = '0';
+    document.getElementById('shorts').style.opacity = '0';
       document.getElementById('desleg1').style.backgroundImage = 'linear-gradient('+document.getElementById('leg-color1').value+','+document.getElementById('leg-color2').value+')';
     document.getElementById('desleg2').style.backgroundImage = 'linear-gradient('+document.getElementById('leg-color1').value+','+document.getElementById('leg-color2').value+')';
       ">Trousers</button> &nbsp;
     <button onclick="
     document.getElementById('deskirt').style.display = 'block';
-    document.getElementById('shorts').style.display = 'none';
+    document.getElementById('shorts').style.opacity = '0';
     document.getElementById('desleg1').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
     document.getElementById('desleg2').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
       ">Skirt</button> &nbsp;
     <button onclick="
-    document.getElementById('deskirt').style.display = 'none';
+    document.getElementById('deskirt').style.opacity = '0';
     document.getElementById('shorts').style.display = 'block';
     document.getElementById('desleg1').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
     document.getElementById('desleg2').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
