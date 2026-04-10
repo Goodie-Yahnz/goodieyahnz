@@ -88,7 +88,7 @@ border: none;
 border-radius: 5px;
 " onclick="
  
-  document.getElementById('w-background').style.backgroundImage = document.getElementById('ntex1').innerHTML + document.getElementById('img-url').value + document.getElementById('ntex2').innerHTML;
+  document.getElementById('bgimg').src = document.getElementById('img-url').value;
   const savedimg = document.createElement('option');
   saveimg.innerHTML = document.getElementById('img-url').value;
   document.getElementById('imgurls').appendChild(savedimg);
