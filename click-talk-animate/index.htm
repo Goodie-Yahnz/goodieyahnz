@@ -74,7 +74,8 @@ top: 40px;
 left: 780px;
 " onclick="
 document.getElementById('bgimg').src =
-document.getElementById(document.getElementById('environments').value).src
+document.getElementById(document.getElementById('environments').value).src;
+  document.getElementById('w-background').style.backgroundImage = 'none';
 ">OK</button>
 <button style="
   position: absolute;
@@ -237,7 +238,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationName = 'talker';
     document.getElementById('desmouth').style.animationDuration = '0.5s';
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desire').style.animationName = 'move';
+    /*document.getElementById('desire').style.animationName = 'move';*/
     document.getElementById('desire').style.animationDuration = '10s';
     document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').play()
@@ -256,7 +257,7 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationName = 'talke';
     document.getElementById('desmouth').style.animationDuration = '10s';
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desire').style.animationName = 'character';
+    /*document.getElementById('desire').style.animationName = 'character';*/
     document.getElementById('desire').style.animationDuration = '10s';
     document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;
     document.getElementById('audio-talk').pause();
@@ -278,7 +279,8 @@ border-radius: 5px;
 document.getElementById('desire').style.animationName = 'mo';
     document.getElementById('desire').style.animationDuration = '10s';
     document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
-
+document.getElementById('deshand1').style.animationName='mo';
+      document.getElementById('deshand2').style.animationName='mo';
     document.getElementById('audio-talk').pause();
     document.getElementById('audio-talk').currentTime = 0;
 ">Stop</button>
@@ -293,12 +295,6 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').style.animationName = 'talke';
-    document.getElementById('desmouth').style.animationDuration = '0.5s';
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desire').style.animationName = 'move';
-    document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').currentTime -= 10;
 ">Move Back 10 secs</button>
    <button style="
@@ -312,12 +308,7 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').style.animationName = 'talke';
-    document.getElementById('desmouth').style.animationDuration = '0.5s';
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desire').style.animationName = 'move';
-    document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
+
     document.getElementById('audio-talk').currentTime += 10;
 ">Move 10 secs</button>
   <button style="
@@ -331,14 +322,59 @@ color: black;
 border: none;
 border-radius: 5px;
 " onclick="
-    document.getElementById('desmouth').style.animationName = 'talke';
-    document.getElementById('desmouth').style.animationDuration = '0.5s';
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desire').style.animationName = 'move';
-    document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;
+
     document.getElementById('audio-talk').loop;
 ">Loop</button>
+    <button id="cbme"style="
+     position: absolute;
+  top: 30px;
+  left: 1260px;
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+
+    document.getElementById('desire').style.animationName='move';
+"
+      onmouseover="
+      document.getElementById('cbme').innerHTML='Double click to disable';
+      "
+      onmouseout="
+      document.getElementById('cbme').innerHTML='Enable Body Movement';
+      "
+      ondblclick="
+
+    document.getElementById('desire').style.animationName='mo';
+">Enable Body Movement</button>
+    <button id="chme"style="
+     position: absolute;
+  top: 30px;
+  left: 1400px;
+background-color: yellow;
+font-family: Century gothic;
+font-weight: bold;
+color: black;
+border: none;
+border-radius: 5px;
+" onclick="
+
+    document.getElementById('deshand1').style.animationName='handm1';
+      document.getElementById('deshand2').style.animationName='handm2';
+"
+      onmouseover="
+      document.getElementById('chme').innerHTML='Double click to disable';
+      "
+      onmouseout="
+      document.getElementById('chme').innerHTML='Enable Body Movement';
+      "
+      ondblclick="
+
+    document.getElementById('deshand1').style.animationName='mo';
+      document.getElementById('deshand2').style.animationName='mo';
+">Enable Hand Movement</button>  
   
 <style>
   @keyframes talker {
@@ -407,8 +443,8 @@ bottom: 0px;
 <div id="desnose" style="position: absolute; top: 70px; left: 35px; width: 8px; height: 8px; border-radius: 0 0 100px 100px; background-color: rgb(119, 119, 88); "></div>
 <div id="desmouth" style="border-width: 1px; border-color: rgb(200, 100, 150);border-style: solid; position: absolute; top: 88px; left: 30px; width: 15px; height: 2px; border-radius: 100px 100px 0 0; background-color: black; "></div>  
 <div id="desbody" style="z-index: 1; width: 76px; height: 74px; ; overflow: auto; position: absolute; left: -10px; border-radius: 100px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; left: -2px; top: 100px; color: red; background-color: yellow;"></div>
-<div id="deshand1" style=" rotate: 20deg; z-index: 1;background-color: rgb(239, 238, 176); width: 11px; height: 77px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); transform-origin: top center; border-style: solid; left: 8px; top: 105px; color: red;"></div>
-<div id="deshand2" style="rotate: -20deg; transform-origin: top center; z-index: 1;width: 11px; height: 79px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; top: 105px; color: red; left: 55px; background-color: rgb(239, 238, 176);"></div>
+<div id="deshand1" style="animation-duration: 1s; animation-timing-function: ease-in-out; rotate: 20deg; z-index: 1;background-color: rgb(239, 238, 176); width: 11px; height: 77px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); transform-origin: top center; border-style: solid; left: 8px; top: 105px; color: red;"></div>
+<div id="deshand2" style="animation-duration: 1s; animation-timing-function: ease-in-out; rotate: -20deg; transform-origin: top center; z-index: 1;width: 11px; height: 79px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; top: 105px; color: red; left: 55px; background-color: rgb(239, 238, 176);"></div>
 <div id="desleg1" style="width: 17px; height: 93px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; left: 20px; top: 164px; color: black; background-color: rgb(0, 70, 70);"></div>
 <div id="desleg2" style="background-color: rgb(0, 70, 70); width: 17px; height: 94px; ; overflow: auto; position: absolute; border-radius: 10px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; left: 45px; top: 164px; color: black;"></div>
 <div id="deskirt" style="z-index: 1; width: 78px; height: 54px; position: absolute; left: 0px; display: none; top: 164px;&nbsp; border-radius: 0px; border-width: 0px; border-color: rgb(0, 0, 0); border-style: solid; color: red; clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%); background-color: black; "></div>
@@ -425,6 +461,12 @@ bottom: 0px;
 33%{transform: skew(-9deg); margin-left: -15px;}
   67%{transform: skew(9deg); margin-left: 15px;}
 }
+  @keyframes handm1 {
+    50%{rotate: 72deg}
+  }
+   @keyframes handm2 {
+    50%{rotate: -72deg}
+  }
 </style>
 <script>
 function colorback() {
@@ -490,6 +532,8 @@ document.getElementById('bgimg').style.display = 'none';    
       
           document.getElementById('desnose').style.opacity = '1';
     document.getElementById('desmouth').style.opacity = '1';
+      document.getElementById('deseye2').style.opacity = '1';
+      document.getElementById('deseye1').style.opacity = '1';
       ">Front</button> &nbsp;
     <button onclick="
     document.getElementById('deshair2').style.display = 'block';
@@ -502,6 +546,7 @@ document.getElementById('bgimg').style.display = 'none';    
       
           document.getElementById('desnose').style.opacity = '1';
     document.getElementById('desmouth').style.opacity = '1';
+      document.getElementById('deseye2').style.opacity = '1';
       ">Left</button> &nbsp;
     <button onclick="
     document.getElementById('deshair2').style.display = 'block';
@@ -511,6 +556,7 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('desmouth').style.left = '47px';
     document.getElementById('deshair2').style.left = '-20px';
           document.getElementById('deshair').style.zIndex = '0';
+      document.getElementById('deseye1').style.opacity = '1';
       
           document.getElementById('desnose').style.opacity = '1';
     document.getElementById('desmouth').style.opacity = '1';
