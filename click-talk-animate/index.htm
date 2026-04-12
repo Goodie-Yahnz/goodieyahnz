@@ -238,7 +238,8 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animationName = 'talker';
     document.getElementById('desmouth').style.animationDuration = '0.5s';
     document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
+    document.getElementById('deshand1').style.animationIterationCount = document.getElementById('audio-talk').duration;
+    document.getElementById('deshand2').style.animationIterationCount = document.getElementById('audio-talk').duration;
     /*document.getElementById('desire').style.animationName = 'move';*/
     document.getElementById('desire').style.animationDuration = '10s';
     document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
@@ -639,14 +640,14 @@ document.getElementById('bgimg').style.display = 'none';    
     document.getElementById('desleg2').style.backgroundImage = 'linear-gradient('+document.getElementById('leg-color1').value+','+document.getElementById('leg-color2').value+')';
       ">Trousers</button> &nbsp;
     <button onclick="
-    document.getElementById('deskirt').style.display = 'block';
+    document.getElementById('deskirt').style.opacity = '1';
     document.getElementById('shorts').style.opacity = '0';
     document.getElementById('desleg1').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
     document.getElementById('desleg2').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
       ">Skirt</button> &nbsp;
     <button onclick="
     document.getElementById('deskirt').style.opacity = '0';
-    document.getElementById('shorts').style.display = 'block';
+    document.getElementById('shorts').style.opacity = '1';
     document.getElementById('desleg1').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
     document.getElementById('desleg2').style.backgroundImage = document.getElementById('desface').style.backgroundImage;
       ">Shorts</button>
