@@ -238,12 +238,12 @@ border-radius: 5px;
     document.getElementById('desmouth').style.animation = 'none';
     document.getElementById('desmouth').style.animationName = 'talker';
     document.getElementById('desmouth').style.animationDuration = '0.5s';
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
-    document.getElementById('deshand1').style.animationIterationCount = document.getElementById('audio-talk').duration;
-    document.getElementById('deshand2').style.animationIterationCount = document.getElementById('audio-talk').duration;
+    document.getElementById('desmouth').style.animationIterationCount = 'infinite';
+    document.getElementById('deshand1').style.animationIterationCount = 'infinte';
+    document.getElementById('deshand2').style.animationIterationCount = 'infinite';
     /*document.getElementById('desire').style.animationName = 'move';*/
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
+    document.getElementById('desire').style.animationIterationCount = 'infinite';  document.getElementById('desire').transformOrigin = 'bottom center';
     document.getElementById('audio-talk').play()
 ">&#9654;</button>
   <button style="
@@ -259,11 +259,11 @@ border-radius: 5px;
 " onclick="
     document.getElementById('desmouth').style.animationName = 'talke';
     document.getElementById('desmouth').style.animationDuration = '10s';
-    document.getElementById('deshand1').style.animationIterationCount = document.getElementById('audio-talk').duration;
-    document.getElementById('deshand2').style.animationIterationCount = document.getElementById('audio-talk').duration;
+    document.getElementById('deshand1').style.animationIterationCount = 'infinite';
+    document.getElementById('deshand2').style.animationIterationCount = 'infinite';
     /*document.getElementById('desire').style.animationName = 'character';*/
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;
+    document.getElementById('desire').style.animationIterationCount = 'infinite';
     document.getElementById('audio-talk').pause();
 ">Pause</button>
  <button style="
@@ -279,10 +279,10 @@ border-radius: 5px;
 " onclick="
     document.getElementById('desmouth').style.animationName = 'talke';
     document.getElementById('desmouth').style.animationDuration = '0.5s';
-    document.getElementById('desmouth').style.animationIterationCount = document.getElementById('audio-talk').duration*2;
+    document.getElementById('desmouth').style.animationIterationCount = 'infinite;
 document.getElementById('desire').style.animationName = 'mo';
     document.getElementById('desire').style.animationDuration = '10s';
-    document.getElementById('desire').style.animationIterationCount = document.getElementById('audio-talk').duration/10;  document.getElementById('desire').transformOrigin = 'bottom center';
+    document.getElementById('desire').style.animationIterationCount = 'infinite;  document.getElementById('desire').transformOrigin = 'bottom center';
 document.getElementById('deshand1').style.animationName='mo';
       document.getElementById('deshand2').style.animationName='mo';
     document.getElementById('audio-talk').pause();
