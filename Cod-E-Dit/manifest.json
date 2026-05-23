@@ -1,0 +1,28 @@
+{
+  "background_color": "#070707",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "QuickCode Workspace",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "QC W",
+  "start_url": "/",
+  "theme_color": "#fdffbd",
+  "icons": [
+    {
+      "src": "https://www.goodieyahnz.com.ng/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "500x500",
+      "isSquare": true,
+      "isPng": false,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 500,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "id": "qcwgoodieyahnz",
+  "description": "For creating and editing codes"
+}
