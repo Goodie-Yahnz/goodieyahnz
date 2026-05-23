@@ -149,11 +149,11 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>sea green</option>
    <option>rgba(255, 255, 255, 0)</option>
  </select>
-<p>Element position X</p><input type="range" id="ele-left" min='-150' max='1300' contenteditable="true">
-<p>Element position Y</p><input type="range" id="ele-top" min='-150' max='650' contenteditable="true">
+<p>Element position X</p><input type="number" id="ele-left" min='-150' step="10"max='1300' contenteditable="true">
+<p>Element position Y</p><input type="number" id="ele-top" min='-150' step="10"max='650' contenteditable="true">
   
-<p>Element width</p><input type="range" min='0' id="ele-width" max='1300' contenteditable="true">100px</p>
-<p>Element height</p><input type="range" min='0' id="ele-height" max='600' contenteditable="true">100px</p>
+<p>Element width</p><input type="number" min='0' id="ele-width" max='1300' contenteditable="true">
+<p>Element height</p><input type="number" min='0' id="ele-height" max='600' contenteditable="true">
  
 <select id="element-display">
 <option>block</option>
@@ -219,13 +219,13 @@ document.getElementById('element-clip').value = document.getElementById(document
 <option style="font-family: ">Wingdings 2</option>
 <option style="font-family: ">Wingdings 3</option>
 </select>
-<input type="range" id="ele-rotate" min='-360' max='360'>
+<input type="number" id="ele-rotate" min='-360' max='360'>
 <p>Font size</p>
 <p contenteditable="true" id="ele-fs">50px</p>
  <p>Opacity</p>
 
   <label for="opacity level">Opacity level:</label>
-  <input type="range" id="ele-opa" step="0.1" max="1" min="0">
+  <input type="number" id="ele-opa" step="0.1" max="1" min="0">
 
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
