@@ -50,20 +50,20 @@ onclick="window.open('./')"
  document.getElementById('sele').style.display = 'none';
 document.getElementById('ele-color').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor;
 document.getElementById('gcolour').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage;
-document.getElementById('ele-rcs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius;
+document.getElementById('ele-rcs').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius-'px';
 document.getElementById('ele-bolor').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderColor;
 document.getElementById('ele-btyle').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle; 
- document.getElementById('ele-bidth').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth; 
-document.getElementById('ele-left').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
-document.getElementById('ele-top').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top;
- document.getElementById('ele-width').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.left;
-document.getElementById('ele-height').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.top; 
+ document.getElementById('ele-bidth').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth-'px'; 
+document.getElementById('ele-left').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.left-'px';
+document.getElementById('ele-top').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.top-'px';
+ document.getElementById('ele-width').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.width-'px';
+document.getElementById('ele-height').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.height-'px'; 
 /*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
 document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
  document.getElementById('element-display').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.display;
  document.getElementById('ele-font').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.fontFamily;
-document.getElementById('ele-rotate').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate;
-document.getElementById('ele-fs').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize;
+document.getElementById('ele-rotate').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate-'deg';
+document.getElementById('ele-fs').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize-'px';
 document.getElementById('element-clip').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath;
 ">Select</button>
 </div>
@@ -108,7 +108,7 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>sea green</option>
  <option>rgba(255, 255, 255, 0)</option>
  </select>
-<p>Rounded corner size</p><p id="ele-rcs" contenteditable="true">0</p><p>Gradient colors</p>
+<p>Rounded corner size</p><input type='number' step="1"  id="ele-rcs" contenteditable="true"><p>Gradient colors</p>
 <p contenteditable="true" id="gcolour">Gradient Colour</p>
  <select id="ele-cread-1">
    <option>linear-</option>
@@ -130,7 +130,7 @@ document.getElementById('element-clip').value = document.getElementById(document
 <option>dashed</option>
 <option>double</option>
 </select>
-<p>Border width</p><p id="ele-bidth" contenteditable="true">0</p><p>Border Colour</p><select id="ele-bolor">
+<p>Border width</p><input type='number' step="1"contenteditable="true"><p>Border Colour</p><select id="ele-bolor">
   <option>red</option>
   <option>orange</option>
   <option>yellow</option>
@@ -149,15 +149,12 @@ document.getElementById('element-clip').value = document.getElementById(document
   <option>sea green</option>
    <option>rgba(255, 255, 255, 0)</option>
  </select>
-<p>Element position X</p><p id="ele-left" contenteditable="true">0px</p>
-<p>Element position Y</p><p id="ele-top" contenteditable="true">0px</p>
+<p>Element position X</p><input type="range" id="ele-left" min='-150' max='1300' contenteditable="true">
+<p>Element position Y</p><input type="range" id="ele-top" min='-150' max='650' contenteditable="true">
   
-<p>Element width</p><p id="ele-width" contenteditable="true">100px</p>
-<p>Element height</p><p id="ele-height" contenteditable="true">100px</p>
-  <script>
-   document.getElementById('ele-width').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.width;
-document.getElementById('ele-height').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.height; 
-  </script>
+<p>Element width</p><input type="range" min='0' max='1300' contenteditable="true">100px</p>
+<p>Element height</p><input type="range" min='0' max='600' contenteditable="true">100px</p>
+ 
 <select id="element-display">
 <option>block</option>
 <option>none</option>
@@ -222,61 +219,13 @@ document.getElementById('ele-height').innerHTML = document.getElementById(docume
 <option style="font-family: ">Wingdings 2</option>
 <option style="font-family: ">Wingdings 3</option>
 </select>
-<select id="ele-rotate">
-<option>-345deg</option>
-<option>-330deg</option>
-<option>-315deg</option>
-<option>-300deg</option>
-<option>-285deg</option>
-<option>-270deg</option>
-<option>-255deg</option>
-<option>-240deg</option>
-<option>-225deg</option>
-<option>-210deg</option>
-<option>-195deg</option>
-<option>-180deg</option>
-<option>-165deg</option>
-<option>-150deg</option>
-<option>-135deg</option>
-<option>-120deg</option>
-<option>-105deg</option>
-<option>-90deg</option>
-<option>-75deg</option>
-<option>-60deg</option>
-<option>-45deg</option>
-<option>-30deg</option>
-<option>-15deg</option>
-<option>0deg</option>
-<option>15deg</option>
-<option>30deg</option>
-<option>45deg</option>
-<option>60deg</option>
-<option>75deg</option>
-<option>90deg</option>
-<option>105deg</option>
-<option>120deg</option>
-<option>135deg</option>
-<option>150deg</option>
-<option>165deg</option>
-<option>180deg</option>
-<option>195deg</option>
-<option>210deg</option>
-<option>225deg</option>
-<option>240deg</option>
-<option>255deg</option>
-<option>270deg</option>
-<option>285deg</option>
-<option>300deg</option>
-<option>315deg</option>
-<option>330deg</option>
-<option>345deg</option>
-</select>
+<input type="range" id="ele-rotate" min='-360' max='360'>
 <p>Font size</p>
 <p contenteditable="true" id="ele-fs">50px</p>
  <p>Opacity</p>
 
   <label for="opacity level">Opacity level:</label>
-  <input type="number" step="0.1" id="ele-opa" max="1" min="0">
+  <input type="range" id="ele-opa" max="1" min="0">
 
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontWeight='bold';
@@ -336,21 +285,21 @@ style.color='black';
 ">Transform to a horizontal parallelogram</button>
 <button onclick="
 document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor = document.getElementById('ele-color').value;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius = document.getElementById('ele-rcs').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderRadius = document.getElementById('ele-rcs').value+'px';
 document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage = document.getElementById('gcolour').innerHTML;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderStyle = document.getElementById('ele-btyle').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.borderColor = document.getElementById('ele-bolor').value;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth = document.getElementById('ele-bidth').innerHTML;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.left = document.getElementById('ele-left').innerHTML;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.top = document.getElementById('ele-top').innerHTML;
-  document.getElementById(document.getElementById('select-shape').innerHTML).style.width = document.getElementById('ele-width').innerHTML;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.height = document.getElementById('ele-height').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.borderWidth = document.getElementById('ele-bidth').value+'px';
+document.getElementById(document.getElementById('select-shape').innerHTML).style.left = document.getElementById('ele-left').value+'px';
+document.getElementById(document.getElementById('select-shape').innerHTML).style.top = document.getElementById('ele-top').value+'px';
+  document.getElementById(document.getElementById('select-shape').innerHTML).style.width = document.getElementById('ele-width').value+'px';
+document.getElementById(document.getElementById('select-shape').innerHTML).style.height = document.getElementById('ele-height').value+'px';
 /*document.getElementById(document.getElementById('select-shape').innerHTML).style.borderImage = document.getElementById('ele-brad').value+'-gradient('+
 document.getElementById('ele-bgolor').value+','+document.getElementById('ele-bpolor').value+')';*/
 document.getElementById(document.getElementById('select-shape').innerHTML).style.fontFamily = document.getElementById('ele-font').value;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate = document.getElementById('ele-rotate').value;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.rotate = document.getElementById('ele-rotate').value+'deg';
 document.getElementById(document.getElementById('select-shape').innerHTML).style.color = document.getElementById('ele-tolor').value;
-document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize = document.getElementById('ele-fs').innerHTML;
+document.getElementById(document.getElementById('select-shape').innerHTML).style.fontSize = document.getElementById('ele-fs').value+'px';
 document.getElementById(document.getElementById('select-shape').innerHTML).style.clipPath = document.getElementById('element-clip').value;
 document.getElementById(document.getElementById('select-shape').innerHTML).style.opacity = document.getElementById('ele-opa').value;
 ">OK</button>
