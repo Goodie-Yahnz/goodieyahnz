@@ -46,6 +46,7 @@ onclick="window.open('./')"
 <option>workspace</option>
 </select>
 <button onclick="
+document.getElementById('select-shape').innerHTML = document.getElementById('element').value;
 document.getElementById('ele-color').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundColor;
 document.getElementById('ele-tolor').value = document.getElementById(document.getElementById('select-shape').innerHTML).style.color;
 document.getElementById('gcolor').innerHTML = document.getElementById(document.getElementById('select-shape').innerHTML).style.backgroundImage;
