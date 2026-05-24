@@ -35,7 +35,7 @@ onclick="window.open('./')"
 <button onclick="iInsert()">Insert</button>
 </div>
 </div>
-<div id="edit-element" style="display:block;">
+<div id="edit-element" style="display:none;">
 
 <p id="select-shape">THIS</p>
 
@@ -381,7 +381,13 @@ el.style.opacity =
 document.getElementById('ele-opa').value;
 
 ">OK</button>
-
+<button style="font-weight: bold" onclick="el.style.fontWeight = 'bold'">B</button>
+<button style="font-weight: bold" onclick="el.style.fontWeight = 'normal'">Remove Bold</button>
+<button style="font-style: italic" onclick="el.style.fontStyle = 'italic'">I</button>
+<button style="font-style: oblique" onclick="el.style.fontStyle = 'oblique'">O</button>
+<button style="font-style: italic" onclick="el.style.fontStyle = 'normal'">Remove font styles</button>
+<button style="text-decoration: underline" onclick="el.style.textDecoration = 'underline'">U</button>
+<button style="text-decoration: underline" onclick="el.style.textDecoration = 'none'">Remove underline</button>
 <button onclick="
 document.getElementById(
 document.getElementById('select-shape').innerHTML + '2'
