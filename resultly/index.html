@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultly</title>
 </head>
-<body style="background-color: black; color: lightyellow;">
+<body style="background-color: black; color: lightyellow; font-size: 30px;">
   <header id="header">
-    <button style="width: 80px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Add Subject</button>
+    <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
   </header>
   <div id="opener">
     BEFORE YOU START
@@ -19,19 +20,29 @@
       ">OK</button>
   </div>
   <div id="addsub" style="display: none;">
+    ADD SUBJECT
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="catone">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
+    <br>
+    EDIT SUBJECT
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="epost">
     <p id="scorsy" style="display: none;"></p>
+    <p id="scors" style="display: none;"></p>
     <select multiple style="" id="totals"></select>
     <select style="" id="allsubs"></select>No of subjects:
     <p id="scorly" style="">0</p>
         <button onclick="
       document.getElementById('addsub').style.display = 'none';
-      document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);;
+      document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
       const newsubj = document.createElement('p');
       newsubj.id = subj.value+'score';
@@ -42,7 +53,7 @@
       totals.appendChild(rese);
       const resel = document.createElement('option');
       resel.id = subj.value+'area'; 
-      resel.innerHTML = subj.value+'score';
+      resel.innerHTML = subj.value+'scoren';
       allsubs.appendChild(resel);
       scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
 let totae = 0;
@@ -53,6 +64,14 @@ for (const option of totaler.options) {
           ototal.innerHTML = totae;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
       ">OK</button>
+    <button onclick="
+     document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
+   partsub.innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
+      ">Apply</button>
+        <button onclick="
+      partsub.remove()
+      partsubn.remove()
+      ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
@@ -87,7 +106,7 @@ for (const option of totaler.options) {
     padding: 60px;
   }
   body {
-    padding-top: 130px;
+    padding-top: 200px;
     padding-left: 30px;
     padding-left: 30px;
     font-family: century gothic;
@@ -104,11 +123,20 @@ for (const option of totaler.options) {
   const examsc = document.getElementById('examsc');
   const egrade = document.getElementById('egrade');
   const post = document.getElementById('post');
+  const ecatone = document.getElementById('ecatone');
+  const ecattwo = document.getElementById('ecattwo');
+  const eexamsc = document.getElementById('eexamsc');
+  const eegrade = document.getElementById('eegrade');
+  const epost = document.getElementById('epost');
   const subj = document.getElementById('subj');
+  const esubj = document.getElementById('esubj');
   const scorcy = document.getElementById('scorsy');
+  const scory = document.getElementById('scors');
   const scorly = document.getElementById('scorly');
   const totaler = document.getElementById('totals');
   const ototal = document.getElementById('ototal');
   const oaver = document.getElementById('oaver');
   const allsubs = document.getElementById('allsubs');
-</script>
+  const partsub = document.getElementById(allsubs.value);
+  const partsubn = document.getElementById(allsubs.value+'n')
+  </script>
