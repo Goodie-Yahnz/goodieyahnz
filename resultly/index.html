@@ -36,6 +36,7 @@
       newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+scorcy.innerHTML+' '+egrade.value+' '+post.value;
       document.getElementById('workspace').appendChild(newsubj);
       const rese = document.createElement('option');
+      rese.id = sorcy.innerHTML+'m';
       rese.innerHTML = scorcy.innerHTML;
       totals.appendChild(rese);
       const resel = document.createElement('option');
@@ -73,6 +74,8 @@ for (const option of totaler.options) {
         <button onclick="
       document.getElementById(allsubs.value).remove()
       document.getElementById(allsubs.value+'n').remove()
+      Number(ototal.innerHTML) - Number(document.getElementById(allsubs.value+'m'));
+      Number(ototal.innerHTML) - Number(1);
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
