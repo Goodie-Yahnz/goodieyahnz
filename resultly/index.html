@@ -32,14 +32,14 @@
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
       const newsubj = document.createElement('p');
       newsubj.id = subj.value+'score';
-      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+total+' '+egrade.value+' '+post.value;
+      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+Sting(total)+' '+egrade.value+' '+post.value;
       document.getElementById('workspace').appendChild(newsubj);
       ">OK</button>
   </div>
   <h1>RESULTLY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
   <h3 id="namee">A school student's result</h3>
-  <div id="workspace" style="background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: bradley hand itc;">
+  <div id="workspace" style="background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: comic sans ms; color: black; font-size: 50px;">
     STUDENT'S RESULT
   </div>
 </body>
