@@ -73,6 +73,7 @@ for (const option of totaler.options) {
     <br>
         <button onclick="
           scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
+          document.getElementById(allsubs.value+'m').remove()
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
@@ -140,5 +141,5 @@ for (const option of totaler.options) {
   const oaver = document.getElementById('oaver');
   const allsubs = document.getElementById('allsubs');
   const partsub = document.getElementById(allsubs.value);
-  const partsubn = document.getElementById(allsubs.value+'n')
+  const partsubn = document.getElementById(allsubs.value+'n');
   </script>
