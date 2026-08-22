@@ -28,11 +28,11 @@
     <p id="scorsy" style="display: none;"></p>
         <button onclick="
       document.getElementById('addsub').style.display = 'none';
-      document.getElementById('scorsy').innerHTML = '+'+catone.value+'+'+cattwo+'+'+examsc;
+      document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);;
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
       const newsubj = document.createElement('p');
-      newsubj.id = subj.value+'-score';
-      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+String(total)+' '+egrade.value+' '+post.value;
+      newsubj.id = subj.value+'score';
+      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+total+' '+egrade.value+' '+post.value;
       document.getElementById('workspace').appendChild(newsubj);
       ">OK</button>
   </div>
@@ -72,8 +72,6 @@
     padding-left: 30px;
     font-family: century gothic;
     text-align: center;
-    display: flex;
-    align-items: center;
   }
 </style>
 <script>
