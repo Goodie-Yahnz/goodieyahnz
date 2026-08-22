@@ -39,10 +39,11 @@
       document.getElementById('workspace').appendChild(newsubj);
       const rese = document.createElement('option');
       rese.innerHTML = scorcy.innerHTML;
+      allsubs.appendChild(resel);
       const resel = document.createElement('option');
       resel.id = subj.value+'area'; 
       resel.innerHTML = subj.value+'score';
-      totaler.appendChild(resel);
+      allsubs.appendChild(resel);
       scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
 let totae = 0;
 
