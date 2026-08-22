@@ -27,20 +27,7 @@
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
-    <br>
-    EDIT SUBJECT
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="epost">
-    <p id="scorsy" style="display: none;"></p>
-    <p id="scors" style="display: none;"></p>
-    <select multiple style="" id="totals"></select>
-    <select style="" id="allsubs"></select>No of subjects:
-    <p id="scorly" style="">0</p>
-        <button onclick="
+     <button onclick="
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
@@ -64,10 +51,25 @@ for (const option of totaler.options) {
           ototal.innerHTML = totae;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
       ">OK</button>
+    <br>
+    EDIT SUBJECT
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="epost">
+    <p id="scorsy" style="display: none;"></p>
+    <p id="scors" style="display: none;"></p>
+    <select multiple style="" id="totals"></select>
+    <select style="" id="allsubs"></select>No of subjects:
+    <p id="scorly" style="">0</p>
+       
     <button onclick="
      document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
    partsub.innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
       ">Apply</button>
+    <br>
         <button onclick="
       partsub.remove()
       partsubn.remove()
