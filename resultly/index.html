@@ -5,7 +5,7 @@
 </head>
 <body style="background-color: black; color: lightyellow;">
   <header id="header">
-    <button style="width: 50px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Add Subject</button>
+    <button style="width: 80px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Add Subject</button>
   </header>
   <div id="opener">
     BEFORE YOU START
@@ -26,6 +26,9 @@
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
     <p id="scorsy" style="display: none;"></p>
+    <select style="display: none;" id="totals"></select>
+    <select style="" id="allsubs"></select>
+    <p id="scorly" style="display: none;">0</p>
         <button onclick="
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);;
@@ -34,14 +37,30 @@
       newsubj.id = subj.value+'score';
       newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+scorcy.innerHTML+' '+egrade.value+' '+post.value;
       document.getElementById('workspace').appendChild(newsubj);
+      const rese = document.createElement('option');
+      rese.innerHTML = scorcy.innerHTML;
+      const resel = document.createElement('option');
+      resel.id = subj.value+'area'; 
+      rese.innerHTML = subj.value+'score';
+      totaler.appendChild(rese);
+      scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
+      let totae = 0;
+
+    for (const option of totaler.selectedOptions) {
+    totae += Number(option.value);
+    }
+          otoal.innerHTML = totae;
+          oaver.innerHTML = Number(otoal.innerHTML)/Number(scorly.innerHTML);
       ">OK</button>
   </div>
   <h1>RESULTLY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
   <h3 id="namee">A school student's result</h3>
-  <div id="workspace" style="background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: comic sans ms; color: black; font-size: 50px;">
+  <div id="workspace" style="background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: comic sans ms; color: black; font-size: 35px;">
     STUDENT'S RESULT
   </div>
+  Total: <t id="ototal"></t>
+  Average: <t id="oaver"></t>
 </body>
 </html>
 <style>
@@ -86,4 +105,9 @@
   const post = document.getElementById('post');
   const subj = document.getElementById('subj');
   const scorcy = document.getElementById('scorsy');
+  const scorly = document.getElementById('scorly');
+  const totaler = document.getElementById('totals');
+  const ototal = document.getElementById('ototal');
+  const oaver = document.getElementById('oaver');
+  const allsubs = document.getElementById('allsubs');
 </script>
