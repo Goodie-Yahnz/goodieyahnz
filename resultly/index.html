@@ -3,10 +3,31 @@
 <head>
   <title>Resultly</title>
 </head>
-<body>
+<body style="background-color: black; color: lightyellow;">
   <header id="header">
     <button style="width: 50px; height: 50px; background-color: yellow;">Add Subject</button>
   </header>
+  <div id="opener">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's Name" id="stuname">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's Class" id="stulass">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's School" id="stuhool">
+    <button onclick="
+      document.getElementById('header').style.display = 'block';
+      namee.innerHTML = 'Result belonging to '+stuname.value+', a student of '+stuhool.value+' in '+stulass.value+' class.'; 
+      ">OK</button>
+  </div>
+  <div id="addsub" style="display: none;">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's Name" id="stuname">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's Class" id="stulass">
+    <input type="text" style="width: 150px; height: 150px;" placeholder="Enter Student's School" id="stuhool">
+    <button onclick="
+      document.getElementById('header').style.display = 'block';
+      namee.innerHTML = 'Result belonging to '+stuname.value+', a student of '+stuhool.value+' in '+stulass.value+' class.'; 
+      ">OK</button>
+  </div>
+  <h1>RESULTLY</h1>
+  <h2>Goodie Yahnz's Smart Result Setter</h2>
+  <h3 id="namee">A school student's result</h3>
 </body>
 </html>
 <style>
@@ -20,4 +41,22 @@
     min-height: 50px;
     display: none;
   }
+    #opener {
+    position: fixed;
+    background-color: aliceblue;
+    padding: 40px;
+    min-height: 150px;
+    padding: 60px;
+    text-align: center;
+    font-family: century gothic;
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-left: 30px;
+  }
 </style>
+<script>
+  const stuname = document.getElementById('stuname');
+  const stulass = document.getElementById('stulass');
+  const stuhool = document.getElementById('stuhool');
+  const namee = document.getElementById('namee');
+</script>
