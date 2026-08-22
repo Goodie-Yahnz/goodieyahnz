@@ -75,7 +75,8 @@ for (const option of totaler.options) {
       document.getElementById(allsubs.value).remove();
       document.getElementById(allsubs.value+'n').remove();
       ototal.innerHTML = Number(ototal.innerHTML) - Number(document.getElementById(allsubs.value+'m'));
-      scorly.innerHTML = Number(ototal.innerHTML) - Number(1);
+      scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
+      oaver.innerHTML = Number(scorly.innerHTML) - Number(1);
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
