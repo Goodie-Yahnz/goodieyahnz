@@ -32,7 +32,7 @@
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
       const newsubj = document.createElement('p');
       newsubj.id = subj.value+'score';
-      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+Sting(total)+' '+egrade.value+' '+post.value;
+      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+scorcy.innerHTML+' '+egrade.value+' '+post.value;
       document.getElementById('workspace').appendChild(newsubj);
       ">OK</button>
   </div>
@@ -85,4 +85,5 @@
   const egrade = document.getElementById('egrade');
   const post = document.getElementById('post');
   const subj = document.getElementById('subj');
+  const scorcy = document.getElementById('scorsy');
 </script>
