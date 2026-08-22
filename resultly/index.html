@@ -40,7 +40,7 @@
       rese.innerHTML = scorcy.innerHTML;
       totals.appendChild(rese);
       const resel = document.createElement('option');
-      resel.id = subj.value+'scorem'; 
+      resel.id = subj.value+'scoren'; 
       resel.innerHTML = subj.value+'score';
       allsubs.appendChild(resel);
       scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
@@ -74,8 +74,8 @@ for (const option of totaler.options) {
         <button onclick="
       document.getElementById(allsubs.value).remove();
       document.getElementById(allsubs.value+'n').remove();
-      Number(ototal.innerHTML) - Number(document.getElementById(allsubs.value+'m'));
-      Number(ototal.innerHTML) - Number(1);
+      ototal.innerHTML = Number(ototal.innerHTML) - Number(document.getElementById(allsubs.value+'m'));
+      scorly.innerHTML = Number(ototal.innerHTML) - Number(1);
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
