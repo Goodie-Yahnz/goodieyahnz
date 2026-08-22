@@ -26,9 +26,9 @@
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
     <p id="scorsy" style="display: none;"></p>
-    <select style="display: none;" id="totals"></select>
-    <select style="" id="allsubs"></select>
-    <p id="scorly" style="display: none;">0</p>
+    <select style="" id="totals"></select>
+    <select style="" id="allsubs"></select>No of subjects:
+    <p id="scorly" style="">0</p>
         <button onclick="
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);;
@@ -41,14 +41,14 @@
       rese.innerHTML = scorcy.innerHTML;
       const resel = document.createElement('option');
       resel.id = subj.value+'area'; 
-      rese.innerHTML = subj.value+'score';
-      totaler.appendChild(rese);
+      resel.innerHTML = subj.value+'score';
+      totaler.appendChild(resel);
       scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
-      let totae = 0;
+let totae = 0;
 
-    for (const option of totaler.selectedOptions) {
-    totae += Number(option.value);
-    }
+for (const option of totaler.options) {
+  totae += Number(option.value);
+}
           otoal.innerHTML = totae;
           oaver.innerHTML = Number(otoal.innerHTML)/Number(scorly.innerHTML);
       ">OK</button>
