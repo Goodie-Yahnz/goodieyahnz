@@ -62,17 +62,17 @@ for (const option of totaler.options) {
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="" id="totals"></select>
-    <select style="" id="allsubs"></select>No of subjects:
+    <select style="display: none;" id="allsubs"></select>No of subjects:
     <p id="scorly" style="">0</p>
        
     <button onclick="
      document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-   partsub.innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
+  document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
       ">Apply</button>
     <br>
         <button onclick="
-      partsub.remove()
-      partsubn.remove()
+      document.getElementById(allsubs.value).remove()
+      document.getElementById(allsubs.value+'n').remove()
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
