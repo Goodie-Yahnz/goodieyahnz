@@ -68,16 +68,23 @@ for (const option of totaler.options) {
     <button onclick="
       esubj.value = allsubs.value.replace('score','');  
       ">Select</button>
+     <button onclick="
+     document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
+  document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
+      document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
+       document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
+       for (const option of totaler.options) {
+  totae += Number(option.value);
+}
+          ototal.innerHTML = totae;
+          oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
+          oper.value = oaver.innerHTML;
+      ">Apply</button>
     <br>
     No of subjects:
     <p id="scorly" style="">0</p>
        
-    <button onclick="
-     document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-  document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
-      
-          oper.value = oaver.innerHTML;
-      ">Apply</button>
+   
     <br>
         <button onclick="
           scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
