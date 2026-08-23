@@ -73,6 +73,7 @@ for (const option of totaler.options) {
   document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
       document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
+       let totae = 0;
        for (const option of totaler.options) {
   totae += Number(option.value);
 }
@@ -110,6 +111,7 @@ for (const option of totaler.options) {
   Total: <t id="ototal"></t>
   Average: <t id="oaver"></t>
   <button onclick="
+    let totae = 0;
     for (const option of totaler.options) {
   totae += Number(option.value);
 }
