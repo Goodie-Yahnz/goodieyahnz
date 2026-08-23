@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultly</title>
 </head>
 <body style="background-color: black; color: lightyellow; font-size: 30px;">
@@ -22,9 +21,9 @@
   <div id="addsub" style="display: none;">
     ADD SUBJECT
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="catone">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="catone">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
      <button onclick="
@@ -51,31 +50,40 @@ for (const option of totaler.options) {
 }
           ototal.innerHTML = totae;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
+          oper.value = oaver.innerHTML
       ">OK</button>
     <br>
     EDIT SUBJECT
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
+    <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="epost">
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="display: none;" id="totals"></select>
-    <select style="" id="allsubs"></select>No of subjects:
+    
+    <select style="" id="allsubs"><option>none</option></select>
+    <button onclick="
+      esubj.value = allsubs.value.replace('score','');  
+      ">Select</button>
+    <br>
+    No of subjects:
     <p id="scorly" style="">0</p>
        
     <button onclick="
      document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
   document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
+      
+          oper.value = oaver.innerHTML;
       ">Apply</button>
     <br>
         <button onclick="
           scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
           document.getElementById(allsubs.value+'m').remove();
-          document.getElementById(allsubs.value+'n').remove();
           document.getElementById(allsubs.value).remove();
+          document.getElementById(allsubs.value+'n').remove();
           let totae = 0;
 
 for (const option of totaler.options) {
@@ -83,6 +91,7 @@ for (const option of totaler.options) {
 }
           ototal.innerHTML = totae;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
+          oper.value = oaver.innerHTML;
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
@@ -93,6 +102,8 @@ for (const option of totaler.options) {
   </div>
   Total: <t id="ototal"></t>
   Average: <t id="oaver"></t>
+  <br>
+  Performance: <input type="range" id="oper" min="0.0" max="100">
 </body>
 </html>
 <style>
@@ -148,6 +159,7 @@ for (const option of totaler.options) {
   const totaler = document.getElementById('totals');
   const ototal = document.getElementById('ototal');
   const oaver = document.getElementById('oaver');
+  const oper = document.getElementById('oper');
   const allsubs = document.getElementById('allsubs');
   const partsub = document.getElementById(allsubs.value);
   const partsubn = document.getElementById(allsubs.value+'n');
