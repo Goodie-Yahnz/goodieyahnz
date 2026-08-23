@@ -109,6 +109,14 @@ for (const option of totaler.options) {
   </div>
   Total: <t id="ototal"></t>
   Average: <t id="oaver"></t>
+  <button onclick="
+    for (const option of totaler.options) {
+  totae += Number(option.value);
+}
+          ototal.innerHTML = totae;
+          oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
+          oper.value = oaver.innerHTML;
+    ">Enhance Score</button> 
   <br>
   Performance: <input type="range" id="oper" min="0.0" max="100">
 </body>
