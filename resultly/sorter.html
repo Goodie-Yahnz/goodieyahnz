@@ -113,9 +113,10 @@ for (const option of totaler.options) {
    <br>
   <button onclick="
     const sortee = [...totaler.selectedOptions]
-    .map(option => (Number(option.value || option.text))
-    .sort((a, b) => b - a);
-    document.getElementById('sorter').innerHTML = sortee;
+  .map(option => Number(option.value || option.text))
+  .sort((a, b) => b - a);
+
+document.getElementById('sorter').innerHTML = sortee;
     ">Sort Totals</button>
   <p id="sorter"></p>
   <br>
