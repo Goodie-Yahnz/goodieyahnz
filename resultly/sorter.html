@@ -112,8 +112,8 @@ for (const option of totaler.options) {
   Average: <t id="oaver"></t>
    <br>
   <button onclick="
-    const sortee = [...totaler.selectedOptions];
-    .map(option => (Number(option.value || option.text));
+    const sortee = [...totaler.selectedOptions]
+    .map(option => (Number(option.value || option.text))
     .sort((a, b) => b - a);
     document.getElementById('sorter').innerHTML = sortee;
     ">Sort Totals</button>
