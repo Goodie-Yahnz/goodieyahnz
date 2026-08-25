@@ -49,7 +49,7 @@
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = egrade.value;
      const newsubjg = document.createElement('p');
-      newsubjg.id = subj.value+'pst';
+      newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = post.value;
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
@@ -99,7 +99,7 @@ for (const option of totaler.options) {
       esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
      <button onclick="
-     document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
+      
   document.getElementById(allsubs.value+'subj').innerHTML = esubj.value; 
     document.getElementById(allsubs.value+'catone').innerHTML = ecatone.value; 
     document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
@@ -107,8 +107,11 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
     document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
     document.getElementById(allsubs.value+'pst').innerHTML = epost.value; 
-      document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
+      
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
+       
+       document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
+       document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
        let totae = 0;
        for (const option of totaler.options) {
   totae += Number(option.value);
@@ -125,7 +128,7 @@ for (const option of totaler.options) {
     <br>
         <button onclick="
           scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
-          document.getElementById(allsubs.value+'m').remove();
+         
           document.getElementById(allsubs.value+'subj').remove();
           document.getElementById(allsubs.value+'catone').remove();
           document.getElementById(allsubs.value+'cattwo').remove();
@@ -134,6 +137,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'gr').remove();
           document.getElementById(allsubs.value+'pst').remove();
           document.getElementById(allsubs.value+'n').remove();
+           document.getElementById(allsubs.value+'m').remove();
           let totae = 0;
 
 for (const option of totaler.options) {
