@@ -89,8 +89,14 @@ for (const option of totaler.options) {
     <select multiple style="display: none;" id="totals"></select>
     
     <select style="" id="allsubs"><option>none</option></select>
-    <button onclick="
-      esubj.value = allsubs.value.replace('score','');  
+     <button onclick="
+      esubj.value = allsubs.value.replace('score',''); 
+      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
+      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
+      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
+      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML;
+      epost.value = document.getElementById(allsubs.value+'pst').innerHTML;
+      esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
      <button onclick="
      document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
