@@ -9,18 +9,18 @@
   </header>
   <div id="opener">
     BEFORE YOU START
-    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Student's Name" id="stuname">
+    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Subject" id="stuname">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Class" id="stulass">
     <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Student's School" id="stuhool">
     <button onclick="
       document.getElementById('header').style.display = 'block';
       document.getElementById('opener').style.display = 'none';
-      namee.innerHTML = 'Result belonging to '+stuname.value+', a student of '+stuhool.value+' in '+stulass.value+' class.'; 
+      namee.innerHTML = 'Result of '+stuname.value+', for the students of '+stuhool.value+' in '+stulass.value+' class.'; 
       ">OK</button>
   </div>
   <div id="addsub" style="display: none;">
     ADD SUBJECT
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Name" id="subj">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="catone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
@@ -78,7 +78,7 @@ for (const option of totaler.options) {
       ">OK</button>
     <br>
     EDIT SUBJECT
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Name" id="esubj">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
@@ -149,9 +149,9 @@ for (const option of totaler.options) {
   <h3 id="namee">A school student's result</h3>
   <div id="workspace" style=" display: flex;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
     STUDENT'S RESULT
-    <div style="border-width: 2px; border-color: black;" id="nadiv">Subject</div>
-    <div style="border-width: 2px; border-color: black;" id="codiv">1st C.A.T</div>
-    <div style="border-width: 2px; border-color: black;" id="ctdiv">2nd C.A.T</div>
+    <div style="border-width: 2px; border-color: black; display: block;" id="nadiv">Subject</div>
+    <div style="border-width: 2px; border-color: black; font-size: 15px;" id="codiv">1st C.A.T</div>
+    <div style="border-width: 2px; border-color: black; font-size: 15px;" id="ctdiv">2nd C.A.T</div>
     <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
     <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
     <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true">Grade</div>
