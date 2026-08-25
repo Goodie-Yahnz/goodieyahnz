@@ -30,10 +30,34 @@
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
-      const newsubj = document.createElement('p');
-      newsubj.id = subj.value+'score';
-      newsubj.innerHTML = subj.value+' '+catone.value+' '+cattwo.value+' '+examsc.value+' '+scorcy.innerHTML+' '+egrade.value+' '+post.value;
-      document.getElementById('workspace').appendChild(newsubj);
+      const newsubja = document.createElement('p');
+      newsubja.id = subj.value+'scoresubj';
+      newsubja.innerHTML = subj.value;
+      const newsubjb = document.createElement('p');
+      newsubjb.id = subj.value+'scorecatone';
+      newsubjb.innerHTML = catone.value;
+      const newsubjc = document.createElement('p');
+      newsubjc.id = subj.value+'scorecattwo';
+      newsubjc.innerHTML = cattwo.value;
+      const newsubjd = document.createElement('p');
+      newsubjd.id = subj.value+'scoreexamsc';
+      newsubjd.innerHTML = examsc.value;
+      const newsubje = document.createElement('p');
+      newsubje.id = subj.value+'scorettl';
+      newsubje.innerHTML = Number(cattwo.value) + Number(catone.value) + Number(examsc.value);
+      const newsubjf = document.createElement('p');
+      newsubjf.id = subj.value+'scoregr';
+      newsubjf.innerHTML = egrade.value;
+     const newsubjg = document.createElement('p');
+      newsubjg.id = subj.value+'pst';
+      newsubjg.innerHTML = post.value;
+      document.getElementById('nadiv').appendChild(newsubja);
+      document.getElementById('codiv').appendChild(newsubjb);
+      document.getElementById('ctdiv').appendChild(newsubjc);
+      document.getElementById('exdiv').appendChild(newsubjd);
+      document.getElementById('todiv').appendChild(newsubje);
+      document.getElementById('grdiv').appendChild(newsubjf);
+      document.getElementById('podiv').appendChild(newsubjg);
       const rese = document.createElement('option');
       rese.id = subj.value+'scorem';
       rese.innerHTML = scorcy.innerHTML;
@@ -70,7 +94,13 @@ for (const option of totaler.options) {
       ">Select</button>
      <button onclick="
      document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-  document.getElementById(allsubs.value).innerHTML = esubj.value+' '+ecatone.value+' '+ecattwo.value+' '+eexamsc.value+' '+scory.innerHTML+' '+eegrade.value+' '+epost.value;   
+  document.getElementById(allsubs.value+'subj').innerHTML = esubj.value; 
+    document.getElementById(allsubs.value+'catone').innerHTML = ecatone.value; 
+    document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
+    document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
+    document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
+    document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
+    document.getElementById(allsubs.value+'pst').innerHTML = epost.value; 
       document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
        let totae = 0;
@@ -90,7 +120,13 @@ for (const option of totaler.options) {
         <button onclick="
           scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
           document.getElementById(allsubs.value+'m').remove();
-          document.getElementById(allsubs.value).remove();
+          document.getElementById(allsubs.value+'subj').remove();
+          document.getElementById(allsubs.value+'catone').remove();
+          document.getElementById(allsubs.value+'cattwo').remove();
+          document.getElementById(allsubs.value+'examsc').remove();
+          document.getElementById(allsubs.value+'ttl').remove();
+          document.getElementById(allsubs.value+'gr').remove();
+          document.getElementById(allsubs.value+'pst').remove();
           document.getElementById(allsubs.value+'n').remove();
           let totae = 0;
 
@@ -107,6 +143,14 @@ for (const option of totaler.options) {
   <h3 id="namee">A school student's result</h3>
   <div id="workspace" style="background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: comic sans ms; color: black; font-size: 35px;">
     STUDENT'S RESULT
+    <div style="border-width: 2px; border-color: black;" id="nadiv">Subject</div>
+    <div style="border-width: 2px; border-color: black;" id="codiv">1st C.A.T</div>
+    <div style="border-width: 2px; border-color: black;" id="ctdiv">2nd C.A.T</div>
+    <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
+    <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
+    <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true">Grade</div>
+    <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
+    <div style="border-width: 2px; border-color: black;" id="indiv" contenteditable="true">Instructor's Comment</div>
   </div>
   Total: <t id="ototal"></t>
   Average: <t id="oaver"></t>
