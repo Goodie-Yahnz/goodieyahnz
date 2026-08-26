@@ -48,7 +48,9 @@
       newsubje.innerHTML = Number(cattwo.value) + Number(catone.value) + Number(examsc.value);
       const newsubjh = document.createElement('p');
       newsubjh.id = subj.value+'scoreav';
-      newsubjh.innerHTML = Number(newsubje.innerHTML)/Number(document.getElementById('noter').innerHTML);
+      const newsubji = Number(newsubjh.innerHTML).toFixed(1);
+      newsubjh.innerHTML = newsubji;
+      
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = egrade.value;
