@@ -49,7 +49,6 @@
       const newsubjh = document.createElement('p');
       newsubjh.id = subj.value+'scoreav';
       newsubjh.innerHTML = Number(newsubje.innerHTML)/Number(document.getElementById('noter').innerHTML);
-      newsubji = Number(newsubjh.innerHTML).toFixed(1);
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = egrade.value;
@@ -62,11 +61,11 @@
       document.getElementById('exdiv').appendChild(newsubjd);
       document.getElementById('todiv').appendChild(newsubje);
       document.getElementById('grdiv').appendChild(newsubjf);
-      document.getElementById('avdiv').appendChild(newsubji);
+      document.getElementById('avdiv').appendChild(newsubjh);
       document.getElementById('podiv').appendChild(newsubjg);
       const rese = document.createElement('option');
       rese.id = subj.value+'scorem';
-      rese.innerHTML = newsubji;
+      rese.innerHTML = newsubjh.innerHTML;
       totals.appendChild(rese);
       const resel = document.createElement('option');
       resel.id = subj.value+'scoren'; 
@@ -113,7 +112,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
    const etttt = Number(document.getElementById(allsubs.value+'ttl').innerHTML)/Number(document.getElementById('enoter').innerHTML);
-       document.getElementById(allsubs.value+'av').innerHTML = etttt.toFixed(1)
+       document.getElementById(allsubs.value+'av').innerHTML = etttt.toFixed(1);
     document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
     document.getElementById(allsubs.value+'pst').innerHTML = epost.value; 
       
