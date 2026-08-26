@@ -184,7 +184,15 @@ for (const option of totaler.options) {
   </style>
   Total: <t id="ototal"></t>
   Average: <t id="oaver"></t>
-   
+  <br>
+  <button onclick="
+    const sortee = [...totaler.options]
+  .map(option => Number(option.value || option.text))
+  .sort((a, b) => b - a);
+
+document.getElementById('sorter').innerHTML = sortee.join(',');
+    ">Sort Totals</button>
+  <p id="sorter"></p>  
   <br>
   Performance: <input type="range" id="oper" min="0.0" max="100">
 </body>
