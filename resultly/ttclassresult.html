@@ -61,6 +61,9 @@
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = post.value;
       newsubjg.contenteditable = 'true';
+       const ins = document.createTextNode();
+       ins.innerHTML = Comment;
+       ins.id = subj.value+'scoreins';
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
       document.getElementById('ctdiv').appendChild(newsubjc);
@@ -150,6 +153,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'ttl').remove();
           document.getElementById(allsubs.value+'gr').remove();
           document.getElementById(allsubs.value+'pst').remove();
+          document.getElementById(allsubs.value+'ins').remove();
           document.getElementById(allsubs.value+'n').remove();
            document.getElementById(allsubs.value+'m').remove();
           let totae = 0;
@@ -169,14 +173,14 @@ for (const option of totaler.options) {
     STUDENT'S RESULT
     <div id="workspac" style="display: flex;
       white-space: nowrap; flex-direction: row;">
-    <div style="border-width: 2px; border-color: black; display: block;" id="nadiv">Subject</div>
+    <div style="border-width: 2px; border-color: black; display: block;" contenteditable="true" id="nadiv">Subject</div>
     <div style="border-width: 2px; border-color: black; width: 200px;" id="codiv">1st C.A.T</div>
     <div style="border-width: 2px; border-color: black; width: 200px;" id="ctdiv">2nd C.A.T</div>
     <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
     <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
     <div style="border-width: 2px; border-color: black;" id="avdiv">Average</div>
-    <div style="border-width: 2px; border-color: black;" id="grdiv" >Grade</div>
-    <div style="border-width: 2px; border-color: black;" id="podiv">Position</div>
+    <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true" >Grade</div>
+    <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
     <div style="border-width: 2px; border-color: black; width: 350px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
   </div>
   <style>
