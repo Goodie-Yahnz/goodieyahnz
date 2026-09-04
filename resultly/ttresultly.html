@@ -63,7 +63,7 @@
       newsubjg.contenteditable = 'true';
       const ins = document.createTextNode();
        ins.innerHTML = Comment;
-       ins.id = subj.value+'ins';
+       ins.id = subj.value+'scoreins';
        document.getElementById('indiv').appendChild(ins);
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
@@ -155,6 +155,8 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'ttl').remove();
           document.getElementById(allsubs.value+'gr').remove();
           document.getElementById(allsubs.value+'pst').remove();
+          document.getElementById(allsubs.value+'av').remove();
+          document.getElementById(allsubs.value+'ins').remove();
           document.getElementById(allsubs.value+'n').remove();
            document.getElementById(allsubs.value+'m').remove();
           let totae = 0;
