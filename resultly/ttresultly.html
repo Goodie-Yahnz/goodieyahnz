@@ -61,6 +61,10 @@
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = post.value;
       newsubjg.contenteditable = 'true';
+      const ins = document.createTextNode();
+       ins.innerHTML = Comment;
+       ins.id = subj.value+'ins';
+       document.getElementById('indiv').appendChild(ins);
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
       document.getElementById('ctdiv').appendChild(newsubjc);
@@ -69,6 +73,7 @@
       document.getElementById('grdiv').appendChild(newsubjf);
       document.getElementById('avdiv').appendChild(newsubjh);
       document.getElementById('podiv').appendChild(newsubjg);
+      
       const rese = document.createElement('option');
       rese.id = subj.value+'scorem';
       rese.innerHTML = newsubjh.innerHTML;
@@ -182,7 +187,9 @@ for (const option of totaler.options) {
   <style>
     #workspac div {
       border-style: inset;
-      margin: 10px;
+      margin: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   </style>
   Total: <t id="ototal"></t>
