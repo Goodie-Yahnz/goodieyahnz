@@ -33,6 +33,7 @@
       const newsubja = document.createElement('p');
       newsubja.id = subj.value+'scoresubj';
       newsubja.innerHTML = subj.value;
+      newsubja.contenteditable = true;
       const newsubjb = document.createElement('p');
       newsubjb.id = subj.value+'scorecatone';
       newsubjb.innerHTML = catone.value;
@@ -48,9 +49,11 @@
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = egrade.value;
+      newsubjf.contenteditable = 'true';
      const newsubjg = document.createElement('p');
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = post.value;
+      newsubjg.contenteditable = 'true';
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
       document.getElementById('ctdiv').appendChild(newsubjc);
@@ -155,8 +158,8 @@ for (const option of totaler.options) {
     <div style="border-width: 2px; border-color: black; width: 200px;" id="ctdiv">2nd C.A.T</div>
     <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
     <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
-    <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true">Grade</div>
-    <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
+    <div style="border-width: 2px; border-color: black;" id="grdiv">Grade</div>
+    <div style="border-width: 2px; border-color: black;" id="podiv">Position</div>
     <div style="border-width: 2px; border-color: black; width: 350px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
   </div>
   <style>
