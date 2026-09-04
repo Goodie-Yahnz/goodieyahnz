@@ -61,8 +61,8 @@
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = post.value;
       newsubjg.contenteditable = 'true';
-       const ins = document.createTextNode();
-       ins.innerHTML = Comment;
+       const ins = document.createElement('p');
+       ins.innerHTML = 'Comment';
        ins.id = subj.value+'scoreins';
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
