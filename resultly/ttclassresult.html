@@ -9,13 +9,13 @@
   </header>
   <div id="opener">
     BEFORE YOU START
-    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Student's Name" id="stuname">
+    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Subjject" id="stuname">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Class" id="stulass">
     <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Student's School" id="stuhool">
     <button onclick="
       document.getElementById('header').style.display = 'block';
       document.getElementById('opener').style.display = 'none';
-      namee.innerHTML = 'Third Term Result belonging to '+stuname.value+', a student of '+stuhool.value+' in '+stulass.value+' class.'; 
+      namee.innerHTML = 'Third Term Result of '+stuname.value+', belonging to the students of '+stuhool.value+' in '+stulass.value+' class.'; 
       ">OK</button>
   </div>
   <div id="addsub" style="display: none;">
@@ -64,6 +64,7 @@
        const ins = document.createElement('p');
        ins.innerHTML = 'Comment';
        ins.id = subj.value+'scoreins';
+      document.getElementById('indiv').appendChild(ins);
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
       document.getElementById('ctdiv').appendChild(newsubjc);
