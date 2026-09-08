@@ -5,8 +5,16 @@
   <link rel="icon" type="image/x-icon" href="https://www.goodieyahnz.com.ng/R.ico">
 </head>
 <body style="background-color: black; color: lightyellow; font-size: 30px;">
-  <header id="header">
+ <header id="header">
+    <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
+    <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
+      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: text/html });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = namee.innerHTML;
+  link.click();
+      ">Save Result as HTML File</button>
   </header>
   <div id="opener">
     BEFORE YOU START
@@ -26,7 +34,7 @@
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="post">
+    
      <button onclick="
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);
@@ -53,7 +61,7 @@
       newsubjf.contenteditable = 'true';
      const newsubjg = document.createElement('p');
       newsubjg.id = subj.value+'scorepst';
-      newsubjg.innerHTML = post.value;
+      newsubjg.innerHTML = 'Position';
       newsubjg.contenteditable = 'true';
        const ins = document.createElement('p');
        ins.innerHTML = 'Comment';
@@ -91,7 +99,7 @@ for (const option of totaler.options) {
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Position" id="epost">
+   >
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="display: none;" id="totals"></select>
@@ -103,7 +111,7 @@ for (const option of totaler.options) {
       ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
       eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
       eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML;
-      epost.value = document.getElementById(allsubs.value+'pst').innerHTML;
+ 
       esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
      <button onclick="
@@ -114,7 +122,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
     document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
-    document.getElementById(allsubs.value+'pst').innerHTML = epost.value; 
+
       
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
        
@@ -163,7 +171,7 @@ for (const option of totaler.options) {
   <h3 id="namee" contenteditable="true">A school student's result</h3>
   <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
-    <div id="workspac" style="font-size: 20px; display: flex;
+    <p id="saver"><div id="workspac" style="font-size: 20px; display: flex;
       white-space: nowrap; flex-direction: row;">
     <div style="border-width: 2px; border-color: black; display: block;" contenteditable="true" id="nadiv">Subject</div>
     <div style="border-width: 2px; border-color: black; width: 200px;" id="codiv">1st C.A.T</div>
@@ -173,7 +181,7 @@ for (const option of totaler.options) {
     <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true" >Grade</div>
     <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
     <div style="border-width: 2px; border-color: black; width: 250px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
-  </div>
+  </div></div>
   <style>
     #workspac div {
       border-style: inset;
