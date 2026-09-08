@@ -34,9 +34,9 @@
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 1st Term Total" id="catone">
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 2nd Term Total" id="cattwo">
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 3rd term Total" id="examsc">
-    No of Terms: <p contenteditable="true" id="noter">3</p>
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
     
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
+    No of Terms: <p contenteditable="true" id="noter">3</p>
      <button onclick="
       document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =   Number(catone.value) + Number(cattwo.value) + Number(examsc.value);
@@ -65,7 +65,7 @@
       
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
-      newsubjf.innerHTML = egrade.value;
+      newsubjf.innerHTML = ''+egrade.value;
       newsubjf.contenteditable = 'true';
      const newsubjg = document.createElement('p');
       newsubjg.id = subj.value+'scorepst';
@@ -107,9 +107,9 @@ for (const option of totaler.options) {
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st Term Total" id="ecatone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd Term Total" id="ecattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 3rd Term Total" id="eexamsc">
-    No of Terms: <p contenteditable="true" id="enoter">3</p>
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
     
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
+    No of Terms: <p contenteditable="true" id="enoter">3</p>
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="display: none;" id="totals"></select>
@@ -120,7 +120,7 @@ for (const option of totaler.options) {
       ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
       ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
       eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML;
+      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML.replace(' ','');
       
       esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
@@ -133,7 +133,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
    const etttt = Number(document.getElementById(allsubs.value+'ttl').innerHTML)/Number(document.getElementById('enoter').innerHTML);
        document.getElementById(allsubs.value+'av').innerHTML = etttt.toFixed(1);
-    document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
+    document.getElementById(allsubs.value+'gr').innerHTML = ' '+eegrade.value; 
     
       
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
