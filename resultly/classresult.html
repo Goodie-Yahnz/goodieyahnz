@@ -57,7 +57,7 @@
       newsubje.innerHTML = Number(cattwo.value) + Number(catone.value) + Number(examsc.value);
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
-      newsubjf.innerHTML = egrade.value;
+      newsubjf.innerHTML = ' '+egrade.value;
       newsubjf.contenteditable = 'true';
      const newsubjg = document.createElement('p');
       newsubjg.id = subj.value+'scorepst';
@@ -110,7 +110,7 @@ for (const option of totaler.options) {
       ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
       ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
       eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML;
+      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML.replace(' ','');
       
       esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
@@ -121,7 +121,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-    document.getElementById(allsubs.value+'gr').innerHTML = eegrade.value; 
+    document.getElementById(allsubs.value+'gr').innerHTML = ' '+eegrade.value; 
      
       document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
