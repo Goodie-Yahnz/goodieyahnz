@@ -9,7 +9,7 @@
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
-      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: text/html });
+      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: 'text/html' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = namee.innerHTML;
@@ -33,7 +33,7 @@
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="catone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="cattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="examsc">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="egrade">
+  
     
      <button onclick="
       document.getElementById('addsub').style.display = 'none';
@@ -57,7 +57,7 @@
       newsubje.innerHTML = Number(cattwo.value) + Number(catone.value) + Number(examsc.value);
       const newsubjf = document.createElement('p');
       newsubjf.id = subj.value+'scoregr';
-      newsubjf.innerHTML = ' '+egrade.value;
+      newsubjf.innerHTML = 'A-F';
       newsubjf.contenteditable = 'true';
      const newsubjg = document.createElement('p');
       newsubjg.id = subj.value+'scorepst';
@@ -98,8 +98,7 @@ for (const option of totaler.options) {
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Grade eg, A, A1, A+, etc." id="eegrade">
-   >
+
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="display: none;" id="totals"></select>
@@ -110,7 +109,7 @@ for (const option of totaler.options) {
       ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
       ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
       eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      eegrade.value = document.getElementById(allsubs.value+'gr').innerHTML.replace(' ','');
+   
  
       esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
       ">Select</button>
@@ -121,7 +120,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-    document.getElementById(allsubs.value+'gr').innerHTML = ' '+eegrade.value; 
+
 
       
        document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
