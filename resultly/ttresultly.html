@@ -6,7 +6,16 @@
 </head>
 <body style="background-color: black; color: lightyellow; font-size: 30px;">
   <header id="header">
+    <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
+    <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
+      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: text/html });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = namee.innerHTML;
+  link.click();
+};
+      ">Save Result as HTML File</button>
   </header>
   <div id="opener">
     BEFORE YOU START
@@ -83,7 +92,7 @@
       resel.id = subj.value+'scoren'; 
       resel.innerHTML = subj.value+'score';
       allsubs.appendChild(resel);
-      scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
+      scorly.innerHTML = totaler.options.length;
 let totb = 0;
 
 for (const option of totaler.options) {
@@ -147,8 +156,8 @@ for (const option of totaler.options) {
    
     <br>
         <button onclick="
-          scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
-         
+          
+         document.getElementById(allsubs.value+'m').remove();
           document.getElementById(allsubs.value+'subj').remove();
           document.getElementById(allsubs.value+'catone').remove();
           document.getElementById(allsubs.value+'cattwo').remove();
@@ -159,7 +168,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'av').remove();
           document.getElementById(allsubs.value+'ins').remove();
           document.getElementById(allsubs.value+'n').remove();
-           document.getElementById(allsubs.value+'m').remove();
+           scorly.innerHTML = totaler.options.length;
           let totae = 0;
 
 for (const option of totaler.options) {
@@ -172,7 +181,7 @@ for (const option of totaler.options) {
   </div>
   <h1>RESULTLY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
-  <h3 id="namee" contenteditable="true">A school student's result</h3>
+  <div id="saver"><h3 id="namee" contenteditable="true">A school student's result</h3>
   <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
     <div id="workspac" style="font-size: 20px; display: flex;
@@ -186,7 +195,7 @@ for (const option of totaler.options) {
     <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true" >Grade</div>
     <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
     <div style="border-width: 2px; border-color: black; width: 250px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
-  </div>
+  </div></div>
   <style>
     #workspac div {
       border-style: inset;
