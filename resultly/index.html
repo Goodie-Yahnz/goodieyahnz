@@ -74,7 +74,7 @@
       resel.id = subj.value+'scoren'; 
       resel.innerHTML = subj.value+'score';
       allsubs.appendChild(resel);
-      scorly.innerHTML = Number(scorly.innerHTML) + Number(1);
+      scorly.innerHTML = totaler.options.length;
 let totb = 0;
 
 for (const option of totaler.options) {
@@ -135,8 +135,8 @@ for (const option of totaler.options) {
    
     <br>
         <button onclick="
-          scorly.innerHTML = Number(scorly.innerHTML) - Number(1);
-         
+          
+          document.getElementById(allsubs.value+'m').remove();
           document.getElementById(allsubs.value+'subj').remove();
           document.getElementById(allsubs.value+'catone').remove();
           document.getElementById(allsubs.value+'cattwo').remove();
@@ -146,7 +146,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'pst').remove();
           document.getElementById(allsubs.value+'ins').remove();
           document.getElementById(allsubs.value+'n').remove();
-           document.getElementById(allsubs.value+'m').remove();
+          
           let totae = 0;
 
 for (const option of totaler.options) {
@@ -155,6 +155,7 @@ for (const option of totaler.options) {
           ototal.innerHTML = totae;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
           oper.value = oaver.innerHTML;
+          scorly.innerHTML = totaler.options.length;
       ">Delete Subject</button>
   </div>
   <h1>RESULTLY</h1>
