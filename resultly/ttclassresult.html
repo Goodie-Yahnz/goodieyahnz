@@ -9,19 +9,26 @@
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
-      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: 'text/html' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = namee.innerHTML;
-  link.click();
+      const blob = new Blob(
+  [document.getElementById('saver').innerHTML],
+  { type: 'text/html' }
+);
+
+const link = document.createElement('a');
+link.href = URL.createObjectURL(blob);
+link.download = namee.innerHTML + '.html';
+
+link.click();
+
+URL.revokeObjectURL(link.href);
 
       ">Save Result as HTML File</button>
   </header>
   <div id="opener">
     BEFORE YOU START
     <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Subject" id="stuname">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Class" id="stulass">
-    <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Student's School" id="stuhool">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Students' Class" id="stulass">
+    <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Students' School" id="stuhool">
     <button onclick="
       document.getElementById('header').style.display = 'block';
       document.getElementById('opener').style.display = 'none';
@@ -29,8 +36,8 @@
       ">OK</button>
   </div>
   <div id="addsub" style="display: none;">
-    ADD SUBJECT
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
+    ADD STUDENT
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's name" id="subj">
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 1st Term Total" id="catone">
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 2nd Term Total" id="cattwo">
     <input type="number" min="1" max="100" step="0.1" style="width: 150px; height: 50px;" placeholder="Enter 3rd term Total" id="examsc">
@@ -102,7 +109,7 @@ for (const option of totaler.options) {
           oper.value = oaver.innerHTML
       ">OK</button>
     <br>
-    EDIT SUBJECT
+    EDIT STUDENT'S SCORE
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="esubj">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st Term Total" id="ecatone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd Term Total" id="ecattwo">
