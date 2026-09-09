@@ -30,8 +30,12 @@
 
     <br>
        <select style="" id="allsubs"><option>none</option></select>
-    <button>Select</button>
-
+   
+<button onclick="
+      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
+      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
+      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
+      ">Select</button>
   
     
      <button onclick="
@@ -105,20 +109,9 @@ for (const option of totaler.options) {
     <p id="scorsy" style="display: none;"></p>
     <p id="scors" style="display: none;"></p>
     <select multiple style="display: none;" id="totals"></select>
-    
-
+  
      <button onclick="
-      esubj.value = allsubs.value.replace('score',''); 
-      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
-      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
-      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
    
- 
-      esubj.value = document.getElementById(allsubs.value+'subj').innerHTML;
-      ">Select</button>
-     <button onclick="
-      
-  document.getElementById(allsubs.value+'subj').innerHTML = esubj.value; 
     document.getElementById(allsubs.value+'catone').innerHTML = ecatone.value; 
     document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
@@ -155,6 +148,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'gr').remove();
           document.getElementById(allsubs.value+'pst').remove();
           document.getElementById(allsubs.value+'ins').remove();
+          document.getElementById(allsubs.value+'av').remove();
           document.getElementById(allsubs.value+'n').remove();
           
           let totae = 0;
@@ -171,7 +165,7 @@ for (const option of totaler.options) {
   <h1>RESULTERGY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
   <h3 id="namee" contenteditable="true">A school student's result</h3>
-  <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
+  <div id="saver"><div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
     <p id="saver"><div id="workspac" style="font-size: 20px; display: flex;
       white-space: nowrap; flex-direction: row;">
