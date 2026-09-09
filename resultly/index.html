@@ -9,11 +9,8 @@
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
-      const blob = new Blob([ document.getElementById('saver').innerHTML], { type: 'text/html' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = namee.innerHTML;
-  link.click();
+      document.body.style.display = 'none';
+      document.getElementById('saver').style.display = 'block';
       ">Finished Editing</button>
   </header>
   <div id="opener">
