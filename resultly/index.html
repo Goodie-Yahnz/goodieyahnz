@@ -42,33 +42,43 @@
       newsubja.id = subj.value+'scoresubj';
       newsubja.innerHTML = subj.value;
       newsubja.contenteditable = 'true';
+      newsubja.style.height = '35px';
       const newsubjb = document.createElement('div');
       newsubjb.id = subj.value+'scorecatone';
       newsubjb.innerHTML = '20';
+      newsubjb.style.height = '35px';
       const newsubjc = document.createElement('div');
       newsubjc.id = subj.value+'scorecattwo';
       newsubjc.innerHTML = '20';
+      newsubjc.style.height = '35px'
       const newsubjd = document.createElement('div');
       newsubjd.id = subj.value+'scoreexamsc';
       newsubjd.innerHTML = '60';
+      newsubjd.style.height = '35px';
       const newsubje = document.createElement('div');
       newsubje.id = subj.value+'scorettl';
       newsubje.innerHTML = '100';
+      newsubje.style.height = '35px';
       const newsubjf = document.createElement('div');
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = 'A-F';
       newsubjf.contenteditable = 'true';
+      newsubjf.style.height = '35px';
      const newsubjg = document.createElement('div');
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = 'Position';
       newsubjg.contenteditable = 'true';
+      newsubjg.style.height = '35px';
        const newsubjh = document.createElement('div');
       newsubjh.id = subj.value+'scoreav';
       newsubjh.innerHTML = 'C.A';
       newsubjh.contenteditable = 'true';
+      newsubjh.style.height = '35px';
        const ins = document.createElement('div');
        ins.innerHTML = 'Comment';
        ins.id = subj.value+'scoreins';
+       ins.style.height = '35px';
+       ins.contenteditable = 'true';
        document.getElementById('indiv').appendChild(ins);
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
@@ -178,9 +188,9 @@ for (const option of totaler.options) {
     <div style="border-width: 2px; border-color: black; width: 200px;" id="ctdiv">2nd C.A.T</div>
     <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
     <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
-    <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true" >Grade</div>
-    <div style="border-width: 2px; border-color: black;" id="avdiv" contenteditable="true" >Class Average</div>
-    <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
+    <div style="border-width: 2px; border-color: black;" id="grdiv" >Grade</div>
+    <div style="border-width: 2px; border-color: black;" id="avdiv"  >Class Average</div>
+    <div style="border-width: 2px; border-color: black;" id="podiv">Position</div>
     <div style="border-width: 2px; border-color: black; width: 250px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
   </div></div>
   <style>
