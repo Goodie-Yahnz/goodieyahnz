@@ -32,7 +32,12 @@
     <br>
        <select style="" id="allsubs"><option>none</option></select>
    
-
+   <br>
+    <button onclick="
+      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
+      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
+      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
+      ">Select</button>
   
     
      <button onclick="
@@ -108,12 +113,7 @@ for (const option of totaler.options) {
           oper.value = oaver.innerHTML
       ">CREATE SUBJECT</button>
     
-    <br>
-    <button onclick="
-      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
-      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
-      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      ">Select</button>
+ 
     <br>
     EDIT SUBJECT
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
@@ -181,7 +181,7 @@ for (const option of totaler.options) {
 </body>
 
    <div id="saver"><h3 id="namee" contenteditable="true">A school student's result</h3>
- <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
+ <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
    <p id="cont" style="display: none; color: none;"
      onmouseover="document.getElementById('cont').style.color = 'yellow';"
@@ -195,9 +195,9 @@ for (const option of totaler.options) {
     <div style="border-width: 2px; border-color: black; width: 200px;" id="ctdiv">2nd C.A.T</div>
     <div style="border-width: 2px; border-color: black;" id="exdiv">Examination</div>
     <div style="border-width: 2px; border-color: black;" id="todiv">Total</div>
-    <div style="border-width: 2px; border-color: black;" id="grdiv" >Grade</div>
-    <div style="border-width: 2px; border-color: black;" id="avdiv"  >Class Average</div>
-    <div style="border-width: 2px; border-color: black;" id="podiv">Position</div>
+    <div style="border-width: 2px; border-color: black;" id="grdiv" contenteditable="true">Grade</div>
+    <div style="border-width: 2px; border-color: black;" id="avdiv" contenteditable="true" >Class Average</div>
+    <div style="border-width: 2px; border-color: black;" id="podiv" contenteditable="true">Position</div>
     <div style="border-width: 2px; border-color: black; width: 250px;" id="indiv" contenteditable="true">Instructor's Comment</div></div>
   </div></div>
   <style>
