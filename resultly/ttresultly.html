@@ -30,18 +30,10 @@
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
 
     <br>
-       <select style="" id="allsubs"><option>none</option></select>
-   
-   <br>
-    <button onclick="
-      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
-      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
-      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      ">Select</button>
+       
   
     
      <button onclick="
-      document.getElementById('addsub').style.display = 'none';
       document.getElementById('scorsy').innerHTML =  '100';
       const total = Function('return '+document.getElementById('scorsy').innerHTML);
       const newsubja = document.createElement('div');
@@ -113,7 +105,14 @@ for (const option of totaler.options) {
           oper.value = oaver.innerHTML
       ">CREATE SUBJECT</button>
     
+ <select style="" id="allsubs"><option>none</option></select>
+   
  
+    <button onclick="
+      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
+      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
+      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
+      ">Select</button>
     <br>
     EDIT SUBJECT
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st Term Total" id="ecatone">
@@ -181,7 +180,7 @@ for (const option of totaler.options) {
   </header>
 </body>
   <div id="saver"><h3 id="namee" contenteditable="true">A school student's third term cummulative result</h3>
-  <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: auto; font-family: comic sans ms; color: black; font-size: 35px;">
+  <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px;; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
     <div id="workspac" style="font-size: 20px; display: flex;
       white-space: nowrap; flex-direction: row;">
