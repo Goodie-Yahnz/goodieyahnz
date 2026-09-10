@@ -4,34 +4,36 @@
   <title>Resultergy</title>
   <link rel="icon" type="image/x-icon" href="https://www.goodieyahnz.com.ng/R.ico">
 </head>
-<body style="background-color: black; color: lightyellow; font-size: 30px;">
-   <header id="header">
+<body style="background-color: black; color: lightyellow; font-size: 30px;"><header id="savee">
+ <header id="header">
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="window.open('#');">Open New File</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="document.getElementById('addsub').style.display = 'block';">Subject Settings</button>
     <button style="width: 100px; height: 50px; background-color: yellow;" onclick="
-      document.body.style.display = 'none';
+      document.getElementById('savee').style.display = 'none';
       document.getElementById('saver').style.display = 'block';
+      document.getElementById('cont').style.display = 'block';
       ">Finished Editing</button>
   </header>
   <div id="opener">
     BEFORE YOU START
-    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Student's Name" id="stuname">
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Class" id="stulass">
-    <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Student's School" id="stuhool">
+    <input type="text" style="width: 200px; height: 50px;" placeholder="Enter Subject" id="stuname">
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Students' Class" id="stulass">
+    <input type="text" style="width: 250px; height: 50px;" placeholder="Enter Students' School" id="stuhool">
     <button onclick="
       document.getElementById('header').style.display = 'block';
       document.getElementById('opener').style.display = 'none';
-      namee.innerHTML = 'Result belonging to '+stuname.value+', a student of '+stuhool.value+' in '+stulass.value+' class.'; 
+      namee.innerHTML = 'Result belonging to '+stuname.value+', for the students of '+stuhool.value+' in '+stulass.value+' class.'; 
       ">OK</button>
   </div>
   <div id="addsub" style="display: none;">
-    ADD SUBJECT
-    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
+    ADD STUDENT
+    <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Student's Name" id="subj">
 
     <br>
        <select style="" id="allsubs"><option>none</option></select>
    
-<button onclick="
+   <br>
+    <button onclick="
       ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
       ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
       eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
@@ -46,30 +48,39 @@
       newsubja.id = subj.value+'scoresubj';
       newsubja.innerHTML = subj.value;
       newsubja.contenteditable = 'true';
+      newsubja.style.height = '35px';
       const newsubjb = document.createElement('div');
       newsubjb.id = subj.value+'scorecatone';
       newsubjb.innerHTML = '20';
+      newsubjb.style.height = '35px';
       const newsubjc = document.createElement('div');
       newsubjc.id = subj.value+'scorecattwo';
       newsubjc.innerHTML = '20';
+      newsubjc.style.height = '35px'
       const newsubjd = document.createElement('div');
       newsubjd.id = subj.value+'scoreexamsc';
       newsubjd.innerHTML = '60';
+      newsubjd.style.height = '35px';
       const newsubje = document.createElement('div');
       newsubje.id = subj.value+'scorettl';
       newsubje.innerHTML = '100';
+      newsubje.style.height = '35px';
       const newsubjf = document.createElement('div');
       newsubjf.id = subj.value+'scoregr';
       newsubjf.innerHTML = 'A-F';
       newsubjf.contenteditable = 'true';
+      newsubjf.style.height = '35px';
      const newsubjg = document.createElement('div');
       newsubjg.id = subj.value+'scorepst';
       newsubjg.innerHTML = 'Position';
       newsubjg.contenteditable = 'true';
-    
+      newsubjg.style.height = '35px';
+       
        const ins = document.createElement('div');
        ins.innerHTML = 'Comment';
        ins.id = subj.value+'scoreins';
+       ins.style.height = '35px';
+       ins.contenteditable = 'true';
        document.getElementById('indiv').appendChild(ins);
       document.getElementById('nadiv').appendChild(newsubja);
       document.getElementById('codiv').appendChild(newsubjb);
@@ -78,7 +89,7 @@
       document.getElementById('todiv').appendChild(newsubje);
       document.getElementById('grdiv').appendChild(newsubjf);
       document.getElementById('podiv').appendChild(newsubjg);
-    
+     
       const rese = document.createElement('option');
       rese.id = subj.value+'scorem';
       rese.innerHTML = scorcy.innerHTML;
@@ -96,9 +107,11 @@ for (const option of totaler.options) {
           ototal.innerHTML = totb;
           oaver.innerHTML = Number(ototal.innerHTML)/Number(scorly.innerHTML);
           oper.value = oaver.innerHTML
-      ">CREATE SUBJECT</button>
+      ">CREATE STUDENT</button>
+    
+ 
     <br>
-    EDIT SUBJECT
+    EDIT STUDENT
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 2nd C.A.T." id="ecattwo">
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter Examination Score" id="eexamsc">
@@ -114,12 +127,11 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
 
-
-      
-       document.getElementById(allsubs.value+'n').innerHTML = esubj.value+'score';
+ 
+      document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
        
        document.getElementById('scors').innerHTML =   Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
-       document.getElementById(allsubs.value+'m').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value);
+       
        let totae = 0;
        for (const option of totaler.options) {
   totae += Number(option.value);
@@ -129,7 +141,7 @@ for (const option of totaler.options) {
           oper.value = oaver.innerHTML;
       ">Apply</button>
     <br>
-    No of subjects:
+    No of students:
     <p id="scorly" style="">0</p>
        
    
@@ -145,7 +157,7 @@ for (const option of totaler.options) {
           document.getElementById(allsubs.value+'gr').remove();
           document.getElementById(allsubs.value+'pst').remove();
           document.getElementById(allsubs.value+'ins').remove();
-          document.getElementById(allsubs.value+'av').remove();
+          
           document.getElementById(allsubs.value+'n').remove();
           
           let totae = 0;
@@ -159,6 +171,10 @@ for (const option of totaler.options) {
           scorly.innerHTML = totaler.options.length;
       ">Delete Subject</button>
   </div>
+  <h1>RESULTERGY</h1>
+  <h2>Goodie Yahnz's Smart Result Setter</h2>
+  </header>
+</body>
   <h1>RESULTERGY</h1>
   <h2>Goodie Yahnz's Smart Result Setter</h2>
   <div id="saver"><h3 id="namee" contenteditable="true">School students' Class result</h3>
