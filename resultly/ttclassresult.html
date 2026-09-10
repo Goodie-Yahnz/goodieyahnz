@@ -130,7 +130,7 @@ for (const option of totaler.options) {
     document.getElementById(allsubs.value+'cattwo').innerHTML = ecattwo.value; 
     document.getElementById(allsubs.value+'examsc').innerHTML = eexamsc.value; 
     document.getElementById(allsubs.value+'ttl').innerHTML = Number(ecatone.value) + Number(ecattwo.value) + Number(eexamsc.value); 
-const etter = Number(document.getElementById(allsubs.value+'m').innerHTML)/Number(document.getElementById('ettter').innerHTML);
+const etter = Number(document.getElementById(allsubs.value+'ttl').innerHTML)/Number(document.getElementById('ettter').innerHTML);
  document.getElementById(allsubs.value+'av').innerHTML = etter.toFixed(1);
       document.getElementById(allsubs.value+'m').innerHTML = etter.toFixed(1);
        
