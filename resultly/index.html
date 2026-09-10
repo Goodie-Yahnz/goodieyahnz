@@ -29,15 +29,8 @@
     ADD SUBJECT
     <input type="text" style="width: 150px; height: 50px;" placeholder="Enter Subject" id="subj">
 
-    <br>
-       <select style="" id="allsubs"><option>none</option></select>
-   
-   <br>
-    <button onclick="
-      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
-      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
-      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
-      ">Select</button>
+    
+       
   
     
      <button onclick="
@@ -113,7 +106,14 @@ for (const option of totaler.options) {
           oper.value = oaver.innerHTML
       ">CREATE SUBJECT</button>
     
- 
+ <select style="" id="allsubs"><option>none</option></select>
+   
+   <br>
+    <button onclick="
+      ecatone.value = document.getElementById(allsubs.value+'catone').innerHTML;
+      ecattwo.value = document.getElementById(allsubs.value+'cattwo').innerHTML;
+      eexamsc.value = document.getElementById(allsubs.value+'examsc').innerHTML;
+      ">Select</button>
     <br>
     EDIT SUBJECT
     <input type="number" style="width: 150px; height: 50px;" placeholder="Enter 1st C.A.T." id="ecatone">
