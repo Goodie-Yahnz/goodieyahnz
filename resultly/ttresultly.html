@@ -180,7 +180,12 @@ for (const option of totaler.options) {
   </header>
 </body>
   <div id="saver"><h3 id="namee" contenteditable="true">A school student's third term cummulative result</h3>
-  <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px;; font-family: comic sans ms; color: black; font-size: 35px;">
+  <p id="cont" style="display: none; color: none;"
+     onmouseover="document.getElementById('cont').style.color = 'yellow';"
+     onmouseout="document.getElementById('cont').style.color = 'none';"
+     onclick="document.getElementById('savee').style.display = 'block';"
+     >CONTINUE EDITING</p>
+   <div id="workspace" style=" display: block;background-color: rgb(200, 255, 255); height: auto; padding: 20px; width: 1150px;; font-family: comic sans ms; color: black; font-size: 35px;">
     <p style="text-align: left;">STUDENT'S RESULT</p>
     <div id="workspac" style="font-size: 20px; display: flex;
       white-space: nowrap; flex-direction: row;">
